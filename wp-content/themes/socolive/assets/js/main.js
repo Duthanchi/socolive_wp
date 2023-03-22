@@ -1,11 +1,13 @@
 $(document).ready(function() {
-	
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 1){  
-			$('.page-title').addClass("sticky");
+		console,log("check")
+		if ($(this).scrollTop() > 1){ 
+			log.console('I am wrong');
+			$('.navbar').addClass("sticky");
 		}
 		else{
-			$('.page-title').removeClass("sticky");
+			log.console('No');
+			$('.navbar').removeClass("sticky");
 		}
 	});
 

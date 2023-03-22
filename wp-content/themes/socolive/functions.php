@@ -35,9 +35,133 @@
         wp_enqueue_script('socolive-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0',true);
         wp_enqueue_script('socolive-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.4.1',true);
         wp_enqueue_script('socolive-main', get_template_directory_uri() . "/assets/js/main.js",array(), '1.0',true);
+        wp_enqueue_script('socolive-dplayer',"https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.10.2/DPlayer.min.js",array(), '1.0',true);
        
     }
 
     add_action('wp_enqueue_scripts', 'socolive_register_scripts');
+
+    /*Custom Post type start*/
+    function cw_post_type_footballs() {
+        $supports = array(
+        'title', // post title
+        'editor', // post content
+        'author', // post author
+        'thumbnail', // featured images
+        'excerpt', // post excerpt
+        'custom-fields', // custom fields
+        'comments', // post comments
+        'revisions', // post revisions
+        'post-formats', // post formats
+        );
+        $labels = array(
+        'name' => _x('football', 'plural'),
+        'singular_name' => _x('footballs', 'singular'),
+        'menu_name' => _x('Football', 'admin menu'),
+        'name_admin_bar' => _x('Football', 'admin bar'),
+        'add_new' => _x('Add New', 'add new'),
+        'add_new_item' => __('Add New Football'),
+        'new_item' => __('New football'),
+        'edit_item' => __('Edit football'),
+        'view_item' => __('View nefootballws'),
+        'all_items' => __('All football'),
+        'search_items' => __('Search football'),
+        'not_found' => __('No football found.'),
+        );
+        $args = array(
+        'supports' => $supports,
+        'labels' => $labels,
+        'public' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'footballs'),
+        'has_archive' => true,
+        'hierarchical' => false,
+        );
+        register_post_type('footballs', $args);
+    }
+    add_action('init', 'cw_post_type_footballs');
+    /*Custom Post type end*/
+
+    /*Custom Post type start*/
+function cw_post_type_news() {
+    $supports = array(
+    'title', // post title
+    'editor', // post content
+    'author', // post author
+    'thumbnail', // featured images
+    'excerpt', // post excerpt
+    'custom-fields', // custom fields
+    'comments', // post comments
+    'revisions', // post revisions
+    'post-formats', // post formats
+    );
+    $labels = array(
+    'name' => _x('news', 'plural'),
+    'singular_name' => _x('news', 'singular'),
+    'menu_name' => _x('News', 'admin menu'),
+    'name_admin_bar' => _x('News', 'admin bar'),
+    'add_new' => _x('Add New', 'add new'),
+    'add_new_item' => __('Add New News'),
+    'new_item' => __('New news'),
+    'edit_item' => __('Edit news'),
+    'view_item' => __('View news'),
+    'all_items' => __('All news'),
+    'search_items' => __('Search news'),
+    'not_found' => __('No news found.'),
+    );
+    $args = array(
+    'supports' => $supports,
+    'labels' => $labels,
+    'public' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'news'),
+    'has_archive' => true,
+    'hierarchical' => false,
+    );
+    register_post_type('news', $args);
+    }
+    add_action('init', 'cw_post_type_news');
+    /*Custom Post type end*/
+
+
+    function cw_post_type_highlights() {
+        $supports = array(
+        'title', // post title
+        'editor', // post content
+        'author', // post author
+        'thumbnail', // featured images
+        'excerpt', // post excerpt
+        'custom-fields', // custom fields
+        'comments', // post comments
+        'revisions', // post revisions
+        'post-formats', // post formats
+        );
+        $labels = array(
+        'name' => _x('highlights', 'plural'),
+        'singular_name' => _x('highlights', 'singular'),
+        'menu_name' => _x('Highlights', 'admin menu'),
+        'name_admin_bar' => _x('Highlights', 'admin bar'),
+        'add_new' => _x('Add New', 'add new'),
+        'add_new_item' => __('Add New Highlights'),
+        'new_item' => __('New highlights'),
+        'edit_item' => __('Edit highlights'),
+        'view_item' => __('View highlights'),
+        'all_items' => __('All highlights'),
+        'search_items' => __('Search highlights'),
+        'not_found' => __('No highlights found.'),
+        );
+        $args = array(
+        'supports' => $supports,
+        'labels' => $labels,
+        'public' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'highlights'),
+        'has_archive' => true,
+        'hierarchical' => false,
+        );
+        register_post_type('highlights', $args);
+        }
+        add_action('init', 'cw_post_type_highlights');
+        /*Custom Post type end*/
 
 ?>
