@@ -1197,6 +1197,8 @@ function get_url_type($data)
         $xpath_main = new DOMXPath($doc_main);
         if (count($xpath_main->query('//body[contains(@class,"page-id-")]')) > 0) {
             return "page";
+        } else if (count($xpath_main->query(get_option('post_sel'))) > 0) {
+            return "post";
         } else if (count($xpath_main->query('//body[contains(@class,"postid-")]')) > 0) {
             return "post";
         } else if (count($xpath_main->query('//body[contains(@class,"category-")]')) > 0) {
