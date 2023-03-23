@@ -2037,10 +2037,6 @@ Author: Luke
     padding: 0 4px !important;
     margin: 0 4px !important;
 }
-.header-wrapper .header-inner .header-left .header-menu li a{
-  color: #fff;
-
-}
 
 .header-wrapper .header-inner .header-left .header-menu li a :hover{
   text-decoration: none;

@@ -53,6 +53,6 @@ footer .inner .desc {
     }
 }
 
-html[lang=vi] footer .guide>div {
+footer .guide>div {
     margin-right: 37px
 }
