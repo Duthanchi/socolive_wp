@@ -1,0 +1,47 @@
+.index-wrapper .swiper-button-next:hover i,
+.index-wrapper .swiper-button-prev:hover i {
+    color: #f8c21b
+}
+
+.index-wrapper .more:hover {
+    color: #f8c21b !important;
+    background: url(//sta.vnres.co/web/assets/soco/img/icon-more-hover.png) no-repeat right !important;
+    background-position: right center !important;
+    background-size: 10px auto !important
+}
+
+.index-wrapper .hot .hot-content li a p .tag {
+    border-top-color: #f8c21b
+}
+
+.index-wrapper .hot .hot-content li a p .tag i {
+    color: #fff
+}
+
+.index-wrapper .category .tag {
+    border-top-color: #f8c21b !important
+}
+
+.index-wrapper .category .tag i {
+    color: #fff !important
+}
+
+.index-wrapper .living-room .video-inner .video-box .inLiveRoom {
+    border: 1px solid #f8c21b;
+    color: #f8c21b
+}
+
+.index-wrapper .living-room .video-inner .video-box:hover .inLiveRoom {
+    background: #f8c21b;
+    color: #fff
+}
+
+.index-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .box .appoinment {
+    background: #f8c21b;
+    color: #fff
+}
+
+.index-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .box .use {
+    color: #000;
+    background: #e5e5e5
+}
