@@ -35,6 +35,9 @@
         wp_enqueue_style('socolive-header', get_template_directory_uri() . "/assets/css/header.css", array(), '1.0', 'all');
         wp_enqueue_style('socolive-match', get_template_directory_uri() . "/assets/css/match.css", array(), '1.0', 'all');
         wp_enqueue_style('socolive-match(1)', get_template_directory_uri() . "/assets/css/match(1).css", array(), '1.0', 'all');
+        wp_enqueue_style('socolive-liveRoom', get_template_directory_uri() . "/assets/css/liveRoom.css", array(), '1.0', 'all');
+        wp_enqueue_style('socoliveliveRoom(1)', get_template_directory_uri() . "/assets/css/liveRoom(1).css", array(), '1.0', 'all');
+        wp_enqueue_style('socolive-chat', get_template_directory_uri() . "/assets/css/chat.css", array(), '1.0', 'all');
     }
 
     add_action('wp_enqueue_scripts', 'socolive_register_styles');
@@ -59,6 +62,8 @@
         wp_enqueue_script('socolive-footer', get_template_directory_uri() . "/assets/js/footer.js",array(), '1.0',true);
         wp_enqueue_script('socolive-foot', get_template_directory_uri() . "/assets/js/foot.js",array(), '1.0',true);
         wp_enqueue_script('socolive-js', get_template_directory_uri() . "/assets/js/js",array(), '1.0',true);
+        wp_enqueue_script('socolive-liveRoom', get_template_directory_uri() . "/assets/js/liveRoom.js",array(), '1.0',true);
+        wp_enqueue_script('socolive-chat', get_template_directory_uri() . "/assets/js/chat.js",array(), '1.0',true);
     }
 
     add_action('wp_enqueue_scripts', 'socolive_register_scripts');
