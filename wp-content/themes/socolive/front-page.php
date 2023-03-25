@@ -857,7 +857,7 @@
       $id = 0; // add the ID of the page where the zero is
       $p = get_page($id);
       $t = $p->post_title;
-      echo '<h1 class="title" style="font-size:260%">'.apply_filters('post_title', $t).'</h1>'; // the title is here wrapped with h3
+      echo '<h1 class="title" style="font-size:260%">'.apply_filters('post_title', $t).'</h1>';
     ?> 
 
       <div class="content">

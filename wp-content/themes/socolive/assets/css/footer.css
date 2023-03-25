@@ -13,8 +13,16 @@ footer .inner {
 footer .inner .logo-footer {
     height: 84px;
     padding-top: 16px;
-    margin: 0 auto
+    margin: 0 auto;
+    display: inline-flex;
 }
+
+
+ footer .inner .logo-footer .widget-container{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+ }
 
 footer .inner .logo-footer img {
     height: 100%
@@ -24,7 +32,7 @@ footer .inner .guide {
     padding-top: 47px
 }
 
-footer .inner .guide>div {
+footer .inner .guide>li {
     display: inline-block;
     height: 22px;
     margin-right: 65px;
@@ -32,11 +40,11 @@ footer .inner .guide>div {
     line-height: 22px
 }
 
-footer .inner .guide>div a {
+footer .inner .guide>li a {
     color: #fff
 }
 
-footer .inner .guide>div:last-child {
+footer .inner .guide>li:last-child {
     margin-right: 0
 }
 
@@ -44,8 +52,25 @@ footer .inner .desc {
     font-size: 14px;
     margin-top: 14px;
     padding-bottom: 50px;
-    color: #798088
+    color: #798088;
+    display: flex;
+    justify-content: center;
 }
+
+
+footer .inner .desc .menu-footer-menu-container>li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu-footer-menu{
+    display: inline-flex;
+}
+
+#menu-footer-menu .menu-item{
+    margin-right: 20px;
+}
+
 
 @media screen and (max-width:1400px) {
     footer .inner {

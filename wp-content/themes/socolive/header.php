@@ -34,7 +34,7 @@
                       array(
                         'menu' => "primary",
                         'container' => "",
-                        "them_location" => "primary",
+                        "theme_location" => "primary",
                       )
                     )
                 ?>

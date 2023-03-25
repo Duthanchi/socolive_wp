@@ -4,6 +4,7 @@
         add_theme_support('title-tag');
         add_theme_support('custom-logo');
         add_theme_support('post-thumbnails');
+        add_theme_support( 'widgets' );
 
     }
 
@@ -11,7 +12,7 @@
 
     function socolive_menus(){
         $locations = array(
-            'primary'=>"Desktop primary menu Left sidebar",
+            'primary'=>"Header primary menu",
             'footer'=>"Footer Menu Items",
         );
         register_nav_menus($locations);    
@@ -58,6 +59,55 @@
     }
 
     add_action('wp_enqueue_scripts', 'socolive_register_scripts');
+    
+    
+    function socolive_widgets_init() {
+        // First footer widget area, located in the footer. Empty by default. 
+        register_sidebar( array(
+            'name' => __( 'First Footer Widget Area', 'socolive' ),
+            'id' => 'first-footer-widget-area',
+            'description' => __( 'The first footer widget area', 'socolive' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+        // Second Footer Widget Area, located in the footer. Empty by default. 
+        register_sidebar( array(
+            'name' => __( 'Second Footer Widget Area', 'socolive' ),
+            'id' => 'second-footer-widget-area',
+            'description' => __( 'The second footer widget area', 'socolive' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+        // Third Footer Widget Area, located in the footer. Empty by default. 
+        register_sidebar( array(
+            'name' => __( 'Third Footer Widget Area', 'socolive' ),
+            'id' => 'third-footer-widget-area',
+            'description' => __( 'The third footer widget area', 'socolive' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+        // Fourth Footer Widget Area, located in the footer. Empty by default. 
+        register_sidebar( array(
+            'name' => __( 'Fourth Footer Widget Area', 'socolive' ),
+            'id' => 'fourth-footer-widget-area',
+            'description' => __( 'The fourth footer widget area', 'socolive' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+            
+    }
+
+    add_action( 'widgets_init', 'socolive_widgets_init' );
+
+
 
     /*Custom Post type start*/
     function cw_post_type_footballs() {
