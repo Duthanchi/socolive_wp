@@ -3,7 +3,7 @@
     function socolive_theme_support(){
         add_theme_support('title-tag');
         add_theme_support('custom-logo');
-        add_theme_support('post-thumbnails');
+        // add_theme_support('post-thumbnails');
         add_theme_support( 'widgets' );
 
     }
@@ -33,14 +33,16 @@
         wp_enqueue_style('socolive-index', get_template_directory_uri() . "/assets/css/index.css", array(), '1.0', 'all');
         wp_enqueue_style('socolive-index(1)', get_template_directory_uri() . "/assets/css/index(1).css", array(), '1.0', 'all');
         wp_enqueue_style('socolive-header', get_template_directory_uri() . "/assets/css/header.css", array(), '1.0', 'all');
+        wp_enqueue_style('socolive-match', get_template_directory_uri() . "/assets/css/match.css", array(), '1.0', 'all');
+        wp_enqueue_style('socolive-match(1)', get_template_directory_uri() . "/assets/css/match(1).css", array(), '1.0', 'all');
     }
 
     add_action('wp_enqueue_scripts', 'socolive_register_styles');
 
     # Regiester script
     function socolive_register_scripts(){
-        wp_enqueue_script('socolive-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1',true);
-        wp_enqueue_script('socolive-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0',true);
+        // wp_enqueue_script('socolive-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1',true);
+        // wp_enqueue_script('socolive-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0',true);
         // wp_enqueue_script('socolive-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.4.1',true);
         wp_enqueue_script('socolive-main', get_template_directory_uri() . "/assets/js/main.js",array(), '1.0',true);
         wp_enqueue_script('socolive-runtime', get_template_directory_uri() . "/assets/js/runtime.js",array(), '1.0',true);
@@ -48,8 +50,9 @@
         wp_enqueue_script('socolive-utils', get_template_directory_uri() . "/assets/js/utils.js",array(), '1.0',true);
         wp_enqueue_script('socolive-jq', get_template_directory_uri() . "/assets/js/jq.js",array(), '1.0',true);
         wp_enqueue_script('socolive-swiper', get_template_directory_uri() . "/assets/js/swiper.min.js",array(), '1.0',true);
+        wp_enqueue_script('socolive-match', get_template_directory_uri() . "/assets/js/match.js",array(), '1.0',true);
         wp_enqueue_script('socolive-flv', get_template_directory_uri() . "/assets/js/flv.min.js",array(), '1.0',true);
-        // wp_enqueue_script('socolive-hls', get_template_directory_uri() . "/assets/js/hls.js",array(), '1.0',true);
+        wp_enqueue_script('socolive-hls', get_template_directory_uri() . "/assets/js/hls.js",array(), '1.0',true);
         wp_enqueue_script('socolive-DPlayer', get_template_directory_uri() . "/assets/js/DPlayer.min.js",array(), '1.0',true);
         wp_enqueue_script('socolive-header', get_template_directory_uri() . "/assets/js/header.js",array(), '1.0',true);
         wp_enqueue_script('socolive-index', get_template_directory_uri() . "/assets/js/index.js",array(), '1.0',true);
@@ -60,7 +63,7 @@
 
     add_action('wp_enqueue_scripts', 'socolive_register_scripts');
     
-    
+    //Add footer widgets for socolive
     function socolive_widgets_init() {
         // First footer widget area, located in the footer. Empty by default. 
         register_sidebar( array(
