@@ -5,7 +5,7 @@
 
 .index-wrapper .living-room {
     height: 640px;
-    background-image: url(//sta.vnres.co/web/assets/soco/img/banner.jpg?v=20220810);
+    /* background-image: url(//sta.vnres.co/web/assets/soco/img/banner.jpg?v=20220810); */
     background-position: center;
     background-size: cover
 }
