@@ -129,6 +129,7 @@
       </div>
     </div>
   </div>
+  <!-- Login -->
   <div class="login-window header-window" hidden=""><img class="close"
       src="<?php echo get_template_directory_uri(); ?>/assets/images/close.png">
     <div class="window-inner">
@@ -420,6 +421,7 @@
       </section>
     </div>
   </div>
+  <!-- Register -->
   <div class="register-window header-window" hidden=""><img class="close"
       src="<?php echo get_template_directory_uri(); ?>/assets/images/close.png">
     <div class="window-inner input-container">
@@ -746,4 +748,5 @@
       </div>
     </div>
   </div>
+  <div class="header-modal" hidden=""></div>
 

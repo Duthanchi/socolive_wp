@@ -4,7 +4,6 @@
 get_header();
 
 ?>
-<div class="header-modal" hidden=""></div>
 <div class="match-wrapper">
   <div class="date-list">
     <ul>

@@ -537,6 +537,7 @@
 
                     function Y(e) {
                         1 == e ? ($(".login-window").show(), k(1), W(2)) : 2 == e && ($(".register-window").show(), k(2), W(1)), $(".header-modal").show()
+                        console.log("aaaaaaaaaaaaaaaa")
                     }
 
                     function W(e) {

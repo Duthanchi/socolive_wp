@@ -1,7 +1,6 @@
 <?php 
 	get_header()
 ?>
-  <div class="header-modal" hidden=""></div>
   <div class="index-wrapper">
     <div class="living-room" id="living-room">
       <div class="video-inner inner">

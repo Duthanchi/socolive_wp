@@ -31,7 +31,8 @@
     <!-- end my dynamic styles-->
         <?php
     }
-    add_action('wp_head', 'socolive_inline_styles');
+   
+   // add_action('wp_head', 'socolive_inline_styles');
 
     # Regiester styles
     function socolive_register_styles(){

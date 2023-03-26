@@ -1190,6 +1190,8 @@
             },
             handleShowLoginWindow: function() {
                 $(".header-wrapper .header-login").click(), (document.isFullScreen || document.mozIsFullScreen || document.webkitIsFullScreen) && (document.exitFullscreen() || document.mozCancelFullScreen() || document.webkitCancelFullScreen() || document.msExitFullscreen())
+                console.log("test");
+                alert(1);    
             },
             handleGuestLogin: function() {
                 var t = (-(new Date).getTime()).toString() + parseInt(9e5 * Math.random() + 1e5, 10).toString(),
