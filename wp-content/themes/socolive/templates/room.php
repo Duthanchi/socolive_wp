@@ -957,9 +957,6 @@ get_header();
                   </div>
                   <div class="chat-item danmaku-item  " data-id="18073817" data-flag="1679718126902">
 
-
-
-
                     <!-- 普通用户发送消息VIP图标 -->
                     <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
                       class="v-class vertical-middle">

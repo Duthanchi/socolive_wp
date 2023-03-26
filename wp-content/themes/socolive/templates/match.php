@@ -119,8 +119,8 @@ get_header();
       </div>
     </div> 
 </div> -->
-<!-- <div class="login-window header-window" hidden=""><img class="close"
-    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/close.png">
+<div class="login-window header-window" hidden="">
+  <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/close.png">
   <div class="window-inner">
     <section class="content type-content">
       <div class="form"><input type="password" autocomplete="new-password" hidden="">
@@ -388,20 +388,20 @@ get_header();
         <div class="or">Hoặc</div>
         <div class="account-box">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/user.svg"> <input class="input-account"
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/user.svg"> <input class="input-account"
               type="text" placeholder="Nhập tên đăng nhập" required=""></div>
           <div class="error-tip"><span hidden="">Nhập tên đăng nhập</span></div>
         </div>
         <div class="password-box">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/password.svg"> <input
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input
               class="input-password" type="password" placeholder="Nhập mật khẩu" required="">
             <div class="eye"><i class="iconfont ali-zhenyan" hidden=""></i> <i class="iconfont ali-biyan"></i></div>
           </div>
           <div class="error-tip"><span hidden="">Nhập mật khẩu</span></div>
         </div>
         <div class="remeber-box"><img class="gou"
-            src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/gou.png"> <span class="login-agree">Ghi
+            src="<?php echo get_template_directory_uri(); ?>/assets/images/gou.png"> <span class="login-agree">Ghi
             nhớ đăng nhập</span></div>
         <div class="bottom"><input class="submit left-submit" type="submit" value="Đăng nhập">
           <div class="right-btn"><span class="register-jump">Đăng ký</span></div>
@@ -411,7 +411,7 @@ get_header();
   </div>
 </div>
 <div class="register-window header-window" hidden=""><img class="close"
-    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/close.png">
+    src="<?php echo get_template_directory_uri(); ?>/assets/images/close.png">
   <div class="window-inner input-container">
     <section class="content type-content">
       <div class="form"><input type="password" autocomplete="new-password" hidden="">
@@ -678,44 +678,43 @@ get_header();
         </div>
         <div class="verify-box" hidden="">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/password.svg"> <input
-              class="input-verify" i18n-placeholder="获取并输入验证码" placeholder="Nhận và nhập mã xác minh" type="tel"
-              maxlength="4">
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input class="input-verify"
+              i18n-placeholder="获取并输入验证码" placeholder="Nhận và nhập mã xác minh" type="tel" maxlength="4">
             <div class="btn-verify"><span class="verify-text" i18n-text="获取验证码">Nhận mã xác minh</span></div>
           </div>
           <div class="error-tip"><span i18n-text="请输入4位验证码" hidden="">Nhập 4 ký tự mã xác minh</span></div>
         </div>
         <div class="check-box" hidden="">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/password.svg"> <input
-              class="input-check" i18n-placeholder="请输入图片上的验证码" placeholder="Nhập mã xác minh trong hình" type="text"
-              maxlength="5"> <img class="check-img" src="https://socolive10.tv/match.html"></div>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input class="input-check"
+              i18n-placeholder="请输入图片上的验证码" placeholder="Nhập mã xác minh trong hình" type="text" maxlength="5"> <img
+              class="check-img" src="https://socolive10.tv/match.html"></div>
           <div class="error-tip"><span i18n-text="请输入5位验证码" hidden="">Nhập 5 ký tự mã xác minh</span></div>
         </div>
         <div class="or" style="display:none">Hoặc</div>
         <div class="account-box">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/user.svg"> <input class="input-account"
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/ser.svg"> <input class="input-account"
               type="text" placeholder="Nhập tên đăng nhập" required=""></div>
           <div class="error-tip"><span hidden="">Nhập tên đăng nhập</span></div>
         </div>
         <div class="captcahr-box" hidden="">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/password.svg"> <input
-              class="input-check" i18n-placeholder="请输入图片上的验证码" placeholder="Nhập mã xác minh trong hình" type="text"
-              maxlength="5"> <img class="check-img" src="https://socolive10.tv/match.html"></div>
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input class="input-check"
+              i18n-placeholder="请输入图片上的验证码" placeholder="Nhập mã xác minh trong hình" type="text" maxlength="5"> <img
+              class="check-img" src="https://socolive10.tv/match.html"></div>
           <div class="error-tip"><span i18n-text="请输入5位验证码" hidden="">Nhập 5 ký tự mã xác minh</span></div>
         </div>
         <div class="nickname-box">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/user.svg"> <input
-              class="input-nickname" i18n-placeholder="请输入用户名" placeholder="Đặt biệt danh" type="text" maxlength="15">
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/user.svg"> <input class="input-nickname"
+              i18n-placeholder="请输入用户名" placeholder="Đặt biệt danh" type="text" maxlength="15">
           </div>
           <div class="error-tip"><span i18n-text="请输入2~15位用户名" hidden="">Nhập 2~15 ký tự đăng nhập</span></div>
         </div>
         <div class="password-box">
           <div class="input-group"><img class="icon"
-              src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/password.svg"> <input
+              src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input
               class="input-password" type="password" placeholder="Nhập mật khẩu" required="">
             <div class="eye"><i class="iconfont ali-zhenyan" hidden=""></i> <i class="iconfont ali-biyan"></i></div>
           </div>
@@ -732,176 +731,38 @@ get_header();
 <div class="level-mode" hidden="">
   <div>
     <div class="level-up"><span>0</span> <img
-        src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/levelUp.png" alt="" srcset=""></div>
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/levelUp.png" alt="" srcset=""></div>
   </div>
 </div>
-<div class="header-modal" hidden=""></div> -->
+<div class="header-modal" hidden=""></div>
 <div class="match-wrapper">
   <div class="date-list">
     <ul>
-      <!-- <li class="item today active" data-tag="1" data-date="2023-03-25"><span class="day">Hôm nay</span><br><span
-            class="date">25.03</span></li>
-        <li class="item" data-tag="2" data-date="2023-03-26"><span class="day">Chủ nhật</span><br><span
-            class="date">26.03</span></li>
-        <li class="item" data-tag="3" data-date="2023-03-27"><span class="day">Thứ hai</span><br><span
-            class="date">27.03</span></li>
-        <li class="item" data-tag="4" data-date="2023-03-28"><span class="day">Thứ ba</span><br><span
-            class="date">28.03</span></li>
-        <li class="item" data-tag="5" data-date="2023-03-29"><span class="day">Thứ tư</span><br><span
-            class="date">29.03</span></li>
-        <li class="item" data-tag="6" data-date="2023-03-30"><span class="day">Thứ năm</span><br><span
-            class="date">30.03</span></li>
-        <li class="item" data-tag="7" data-date="2023-03-31"><span class="day">Thứ sáu</span><br><span
-            class="date">31.03</span></li> -->
+      <li class="item today active" data-tag="1" data-date=""><span class="day">Hôm nay</span><br><span
+          class="date"></span></li>
+      <li class="item" data-tag="2" data-date=""><span class="day"></span><br><span class="date"></span></li>
+      <li class="item" data-tag="3" data-date=""><span class="day"></span><br><span class="date"></span></li>
+      <li class="item" data-tag="4" data-date=""><span class="day"></span><br><span class="date"></span></li>
+      <li class="item" data-tag="5" data-date=""><span class="day"></span><br><span class="date"></span></li>
+      <li class="item" data-tag="6" data-date=""><span class="day"></span><br><span class="date"></span></li>
+      <li class="item" data-tag="7" data-date=""><span class="day"></span><br><span class="date"></span></li>
     </ul>
   </div>
   <div class="match-box">
     <div class="match-loading" style="display: none;"><img
-        src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/loading.gif"></div>
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif"></div>
     <div class="match-none" hidden="" style="display: none;"><img
-        src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/none2.png"><br><span>Danh sách
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/none2.png"><br><span>Danh sách
         trống~</span></div>
     <div class="match-data active" data-tag="1" hidden="">
-      <div class="match-card float-clear" data-id="221187">
-        <div class="left float-clear">
-          <div class="info">
-            <div style="">MEX WD1</div>
-            <div class="time">09:00</div>
-          </div>
-          <div class="team">
-            <div class="host">
-              <img class="host-img match-cover"
-                src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/cedf93ca96a6162c8a33b9ab91f3b2ec.png"
-                data-src="https://sta.vnres.co/file/common/20230322/cedf93ca96a6162c8a33b9ab91f3b2ec.png">
-              <span class="host-name ellipsis">Club America Women's</span>
-            </div>
-            <div class="guest">
-              <img class="guest-img match-cover"
-                src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/a71722019eb125950142dd02a11d81ab.png"
-                data-src="https://sta.vnres.co/file/common/20230322/a71722019eb125950142dd02a11d81ab.png">
-              <span class="guest-name ellipsis">Chivas Guadalajara Women's</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="anchor-list" data-tag="0">
-            <div class="avatar-prev prev-0 swiper-button-disabled"></div>
-            <div class="avatar-list avatar-swiper-container swiper-no-swiping container-0">
-              <div class="swiper-wrapper">
-                <div class="avatar-box swiper-slide living" data-uid="147801">
-                  <img class="avatar"
-                    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/645b22573c567baf728a81e490f7e47e_ss300.jpg"
-                    data-src="https://sta.vnres.co/file/head/20220627/645b22573c567baf728a81e490f7e47e_ss300.jpg"
-                    data-src-backup="https://sta.vnres.co/file/head/20220627/645b22573c567baf728a81e490f7e47e.jpg"
-                    data-roomnum="147801" title="BLV TAP">
-                  <div class="name ellipsis">BLV TAP</div>
-                  <img class="live" src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/live.png"
-                    hidden="">
-                </div>
-                <div class="avatar-box swiper-slide living" data-uid="139384">
-                  <img class="avatar"
-                    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/d7fee99a22d6975080c699f6184f64e6_ss300.jpeg"
-                    data-src="https://sta.vnres.co/file/head/20230311/d7fee99a22d6975080c699f6184f64e6_ss300.jpeg"
-                    data-src-backup="https://sta.vnres.co/file/head/20230311/d7fee99a22d6975080c699f6184f64e6.jpeg"
-                    data-roomnum="226699" title="BLV SINGER">
-                  <div class="name ellipsis">BLV SINGER</div>
-                  <img class="live" src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/live.png"
-                    hidden="">
-                </div>
-                <div class="avatar-box swiper-slide living" data-uid="112565">
-                  <img class="avatar"
-                    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/b73fdd48331d4305b43609e7f698f22f_ss300.jpeg"
-                    data-src="https://sta.vnres.co/file/head/20230103/b73fdd48331d4305b43609e7f698f22f_ss300.jpeg"
-                    data-src-backup="https://sta.vnres.co/file/head/20230103/b73fdd48331d4305b43609e7f698f22f.jpeg"
-                    data-roomnum="112565" title="BLV GOT">
-                  <div class="name ellipsis">BLV GOT</div>
-                  <img class="live" src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/live.png"
-                    hidden="">
-                </div>
-                <div class="avatar-box swiper-slide living" data-uid="190631">
-                  <img class="avatar"
-                    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/67e847008115c00e97dd5e0b777a7c01.jpg"
-                    data-src="https://sta.vnres.co/file/head/20220508/67e847008115c00e97dd5e0b777a7c01_ss300.jpg"
-                    data-src-backup="https://sta.vnres.co/file/head/20220508/67e847008115c00e97dd5e0b777a7c01.jpg"
-                    data-roomnum="190631" title="BLV TONY">
-                  <div class="name ellipsis">BLV TONY</div>
-                  <img class="live" src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/live.png"
-                    hidden="">
-                </div>
-              </div>
-            </div>
-            <div class="avatar-next next-0 swiper-button-disabled"></div>
-          </div>
-
-
-          <div class="living-box">
-            <img src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/triangle.png">
-            <span>Đang trực tiếp...</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="match-card float-clear" data-id="221209">
-        <div class="left float-clear">
-          <div class="info">
-            <div style="">MEX D2</div>
-            <div class="time">09:05</div>
-          </div>
-          <div class="team">
-            <div class="host">
-              <img class="host-img match-cover"
-                src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/e57236d68b875729f0331cfbaa5eb81e.png"
-                data-src="https://sta.vnres.co/file/common/20230322/e57236d68b875729f0331cfbaa5eb81e.png">
-              <span class="host-name ellipsis">Cancun</span>
-            </div>
-            <div class="guest">
-              <img class="guest-img match-cover"
-                src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/9bd1ce85643165b5863dd03440100d04.png"
-                data-src="https://sta.vnres.co/file/common/20230322/9bd1ce85643165b5863dd03440100d04.png">
-              <span class="guest-name ellipsis">Cimarrones Sonora</span>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="anchor-list" data-tag="1">
-            <div class="avatar-prev prev-1 swiper-button-disabled"></div>
-            <div class="avatar-list avatar-swiper-container swiper-no-swiping container-1">
-              <div class="swiper-wrapper">
-                <div class="avatar-box swiper-slide living" data-uid="115493">
-                  <img class="avatar"
-                    src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/f326de91b5673cdd93397ced04c8b39b.jpg"
-                    data-src="https://sta.vnres.co/file/head/20220627/f326de91b5673cdd93397ced04c8b39b_ss300.jpg"
-                    data-src-backup="https://sta.vnres.co/file/head/20220627/f326de91b5673cdd93397ced04c8b39b.jpg"
-                    data-roomnum="115493" title="BLV FIREMAN">
-                  <div class="name ellipsis">BLV FIREMAN</div>
-                  <img class="live" src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/live.png"
-                    hidden="">
-                </div>
-              </div>
-            </div>
-            <div class="avatar-next next-1 swiper-button-disabled"></div>
-          </div>
-
-
-          <div class="living-box">
-            <img src="./Trực Tiếp Bóng Đá - xem trực tuyến hôm nay - Socolive_files/triangle.png">
-            <span>Đang trực tiếp...</span>
-          </div>
-
-        </div>
-      </div>
-      <!-- <div class="subscribe " data-status="1">Đặt lịch</div> -->
     </div>
+    <div class="match-data" data-tag="2" hidden=""></div>
+    <div class="match-data" data-tag="3" hidden=""></div>
+    <div class="match-data" data-tag="4" hidden=""></div>
+    <div class="match-data" data-tag="5" hidden=""></div>
+    <div class="match-data" data-tag="6" hidden=""></div>
+    <div class="match-data" data-tag="7" hidden=""></div>
   </div>
-</div>
-  <div class="match-data" data-tag="2" hidden=""></div>
-  <div class="match-data" data-tag="3" hidden=""></div>
-  <div class="match-data" data-tag="4" hidden=""></div>
-  <div class="match-data" data-tag="5" hidden=""></div>
-  <div class="match-data" data-tag="6" hidden=""></div>
-  <div class="match-data" data-tag="7" hidden=""></div>
-</div>
 </div>
 
 <?php

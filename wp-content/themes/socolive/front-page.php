@@ -276,7 +276,7 @@
           </div>
           <div class="password-box">
             <div class="input-group"><img class="icon"
-                src="./Socolive - Trực tiếp bóng đá tốc độ cao không quảng cáo Full HD_files/password.svg"> <input
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input
                 class="input-password" type="password" placeholder="Nhập mật khẩu" required="">
               <div class="eye"><i class="iconfont ali-zhenyan" hidden=""></i> <i class="iconfont ali-biyan"></i></div>
             </div>
