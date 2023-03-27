@@ -1,0 +1,81 @@
+.liveRoom-wrapper .live-room {
+    background: #25284c
+}
+
+.liveRoom-wrapper .live-room .inner .media .top-block .top-right-block .follow {
+    background: #f8c21b !important;
+    color: #fff !important
+}
+
+.liveRoom-wrapper .live-room .inner .media .top-block .top-right-block .no-follow {
+    background: #d8d8d8 !important;
+    color: #000 !important
+}
+
+.liveRoom-wrapper .live-room .inner .media .bottom-block .gift .get-integral:hover {
+    color: #f8c21b
+}
+
+.liveRoom-wrapper .live-room .inner .media .bottom-block .send-gift-error .gift-error-msg .close {
+    background: #f8c21b !important;
+    color: #fff !important
+}
+
+.liveRoom-wrapper .live-room .inner .chat .chat-center .chat-panel .newMsg-tips span {
+    font-weight: 500
+}
+
+.liveRoom-wrapper .live-room .inner .chat .chat-center .chat-panel .chat-list .chat-item.danmaku-item:not(.sys-msg):hover {
+    box-shadow: 0 2px 9px -3px;
+    background-image: url(//sta.vnres.co/web/assets/soco/img/chat-hover.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom
+}
+
+.liveRoom-wrapper .live-room .inner .chat .chat-center .chat-panel .chat-list .chat-item.danmaku-item .user-name {
+    color: #000;
+    font-weight: 700
+}
+
+.liveRoom-wrapper .live-room .inner .chat .chat-center .chat-panel .forbidden-tip .forbidden-select>div .forbidden-select-opt div {
+    width: 135px
+}
+
+.liveRoom-wrapper .live-room .inner .chat .chat-center .chat-panel .forbidden-sure-tip .forbidden-sure-btn {
+    background: #f8c21b;
+    color: #fff
+}
+
+.liveRoom-wrapper .live-room .inner .chat .chat-bottom .option .inputBox .send.send-on {
+    background: #f8c21b;
+    color: #fff;
+    border: 1px solid #f8c21b
+}
+
+.liveRoom-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .title {
+    line-height: 16px
+}
+
+.liveRoom-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .title .fr {
+    float: left
+}
+
+.liveRoom-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .title .fl span {
+    vertical-align: baseline;
+    font-weight: 700
+}
+
+.liveRoom-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .box .appoinment {
+    background: #f8c21b;
+    color: #fff
+}
+
+.liveRoom-wrapper .appoinment-list .appoinment-swiper-container .swiper-wrapper .swiper-slide.game .box .appoinment.use {
+    background: #d8d8d8;
+    color: #000
+}
+
+.liveRoom-wrapper .category .category-list li .live-item p .tag {
+    border-top-color: #f8c21b;
+    color: #fff
+}
