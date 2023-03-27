@@ -24,11 +24,9 @@
     function socolive_inline_styles() {
         $body_bg_image="/wp-content/uploads/banner.jpg"; //here i would get your value from ACF
         ?>
-    <!-- start my dynamic styles-->
     <style type="text/css">
         .index-wrapper .living-room { background-image: url('<?= $body_bg_image ?>')};
     </style>
-    <!-- end my dynamic styles-->
         <?php
     }
    

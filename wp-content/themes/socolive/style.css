@@ -2042,3 +2042,10 @@ Author: Luke
   text-decoration: none;
 }
 
+#content {
+  padding-top: 100px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+

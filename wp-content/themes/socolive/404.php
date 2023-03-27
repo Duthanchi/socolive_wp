@@ -5,11 +5,13 @@
  * @package Socolive
  */
 get_header(); ?>
-  <div id="content" class="container">
+  <div id="content" class="container" style="padding-top: 100px;
+  justify-content: center;
+  display: flex;
+  text-align: center;">
   <!--container--> 
     <!--row-->
     <div class="row">
-      <?php do_action('Socolive_breadcrumb_content'); ?>
       <!--container-->
       <div class="col-lg-12 text-center bs-section"> 
         <!--mg-error-404-->
@@ -27,3 +29,4 @@ get_header(); ?>
 </div>
 <?php
 get_footer();
+?>
