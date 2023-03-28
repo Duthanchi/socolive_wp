@@ -50,19 +50,20 @@
         wp_enqueue_style('socolive-liveRoom', get_template_directory_uri() . "/assets/css/liveRoom.css", array(), '1.0', 'all');
         wp_enqueue_style('socoliveliveRoom(1)', get_template_directory_uri() . "/assets/css/liveRoom(1).css", array(), '1.0', 'all');
         wp_enqueue_style('socolive-chat', get_template_directory_uri() . "/assets/css/chat.css", array(), '1.0', 'all');
+        wp_enqueue_script('socolive-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1',true);
     }
 
     add_action('wp_enqueue_scripts', 'socolive_register_styles');
 
     # Regiester script
     function socolive_register_scripts(){
-        // wp_enqueue_script('socolive-jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1',true);
+        
         // wp_enqueue_script('socolive-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0',true);
         // wp_enqueue_script('socolive-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.4.1',true);
         wp_enqueue_script('socolive-main', get_template_directory_uri() . "/assets/js/main.js",array(), '1.0',true);
         wp_enqueue_script('socolive-runtime', get_template_directory_uri() . "/assets/js/runtime.js",array(), '1.0',true);
         wp_enqueue_script('socolive-vendors', get_template_directory_uri() . "/assets/js/vendors.js",array(), '1.0',true);
-        wp_enqueue_script('socolive-utils', get_template_directory_uri() . "/assets/js/utils.js",array(), '1.0',true);
+        
         wp_enqueue_script('socolive-jq', get_template_directory_uri() . "/assets/js/jq.js",array(), '1.0',true);
         wp_enqueue_script('socolive-swiper', get_template_directory_uri() . "/assets/js/swiper.min.js",array(), '1.0',true);
         wp_enqueue_script('socolive-match', get_template_directory_uri() . "/assets/js/match.js",array(), '1.0',true);
@@ -70,6 +71,8 @@
         wp_enqueue_script('socolive-hls', get_template_directory_uri() . "/assets/js/hls.js",array(), '1.0',true);
         wp_enqueue_script('socolive-DPlayer', get_template_directory_uri() . "/assets/js/DPlayer.min.js",array(), '1.0',true);
         wp_enqueue_script('socolive-header', get_template_directory_uri() . "/assets/js/header.js",array(), '1.0',true);
+        wp_enqueue_script('socolive-utils', get_template_directory_uri() . "/assets/js/utils.js",array(), '1.0',true);
+        // wp_enqueue_script('login-plugin-scripts', plugin_dir_url(__FILE__) . 'assets/js/login.js', array('jquery'), '1.0', true);
         wp_enqueue_script('socolive-index', get_template_directory_uri() . "/assets/js/index.js",array(), '1.0',true);
         wp_enqueue_script('socolive-footer', get_template_directory_uri() . "/assets/js/footer.js",array(), '1.0',true);
         wp_enqueue_script('socolive-foot', get_template_directory_uri() . "/assets/js/foot.js",array(), '1.0',true);

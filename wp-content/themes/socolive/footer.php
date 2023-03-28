@@ -16,7 +16,8 @@
   
   </div>
     </footer> 
-        </div> 
+        </div>
+        <script type="text/javascript" defer="" data-pmdelayedscript="https://s4.cnzz.com/z_stat.php?id=1280574579" data-cfasync="false" data-no-optimize="1" data-no-defer="1" data-no-minify="1" src="https://s4.cnzz.com/z_stat.php?id=1280574579"></script>
         <?php 
             wp_footer();
         ?>

@@ -132,8 +132,8 @@
   
   <?php
     echo do_shortcode('[soco-user-forms-login]');
-    echo do_shortcode('[soco-user-forms-register]');
   ?>
+  <?php  echo do_shortcode('[soco-user-forms-register]');?>
   <div class="level-mode" hidden="">
     <div>
       <div class="level-up"><span>0</span> <img
