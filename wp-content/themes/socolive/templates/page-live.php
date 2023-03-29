@@ -1,4 +1,4 @@
-<?php /* Template Name: Room */?>
+<?php /* Template Name: live */?>
 <?php
 get_header();
 ?>

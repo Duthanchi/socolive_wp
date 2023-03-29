@@ -61,6 +61,24 @@ function socolive_register_styles()
 
 add_action('wp_enqueue_scripts', 'socolive_register_styles');
 
+
+function add_custom_query_vars( $vars ){
+    $vars[] = "match_name";
+    $vars[] = "roomID";
+    return $vars;
+  }
+  add_filter( 'query_vars', 'add_custom_query_vars' );
+
+function custom_rewrite_rule() {
+    add_rewrite_rule(
+        '^truc-tiep/([^/]+)/?$',
+        'index.php?pagename=truc-tiep&match_name=$matches[1]&roomID=$matches[2]',
+        'top'
+    );
+}
+add_action('init', 'custom_rewrite_rule');
+
+
 # Regiester script
 function socolive_register_scripts()
 {
