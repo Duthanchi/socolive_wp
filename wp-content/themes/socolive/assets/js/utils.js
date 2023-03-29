@@ -323,6 +323,7 @@
             },
             roomNum: function(t, e) {},
             room: function(t, e) {
+                debugger;
                 $(".media .text-title").html(t.title),
                 $(".media .head-img").attr("data-src", t.anchor.cutOutIcon ? t.anchor.cutOutIcon : t.anchor.icon).attr("data-src-backup", t.anchor.icon),
                 $(".media .text-msg .nickName").html(t.anchor.nickName),
@@ -880,9 +881,11 @@
             return t || (t = this.getUrlParam("roomNum")),
             t
         },
-        roomUrl: function(t) {
+        roomUrl: function(t, e) {
+            debugger;
             var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""
-              , n = "2" == o.default.debug ? "/pages/liveRoom.html?roomNum=".concat(t, "&scheduleId=").concat(e) : "/room/".concat(t, "?scheduleId=").concat(e);
+            var h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""
+              , n = "2" == o.default.debug ? "/pages/liveRoom.html?roomNum=".concat(t, "&scheduleId=").concat(e) : "/luke/truc-tiep/".concat("vn-vs-thai-lan/","?roomID=").concat(t, "?scheduleId=").concat(e);
             return o.default.roomDomain ? o.default.roomDomain + n : n
         },
         uuid: function(t, e) {
@@ -2474,13 +2477,15 @@
     }
     e.default = {
         liveDetail: function(t, e) {
-            return o.default.jsonp("/room/".concat(t.roomNum, "/detail.json?").concat(r()), "detail", e)
+            var currentUrl = window.location.href;
+            var roomID = getAllUrlParams(currentUrl).roomid;
+            return o.default.jsonp("/room/".concat(roomID, "/detail.json?").concat(r()), "detail", e)
         },
         liveAppointmentSchedule: function(t, e) {
-            return o.default.jsonp("/room/".concat(t.roomNum, "/schedule.json?").concat(r()), "schedule_".concat(t.roomNum), e)
+            return o.default.jsonp("/room/".concat(roomID, "/schedule.json?").concat(r()), "schedule_".concat(t.roomNum), e)
         },
         liveRankList: function(t, e) {
-            return o.default.jsonp("/room/".concat(t.roomNum, "/gift_rank.json?").concat(r()), "gift_rank", e)
+            return o.default.jsonp("/room/".concat(roomID, "/gift_rank.json?").concat(r()), "gift_rank", e)
         },
         allRoom: function(t, e) {
             return o.default.jsonp("/all_live_rooms.json?".concat(r()), "all_live_rooms", e)
@@ -3572,5 +3577,66 @@
 }
 ]]);
 
+// function getRoomID(){
+//     // Lấy đường dẫn hiện tại của trang
+//     debugger;
+//     var currentUrl = window.location.href;
+
+//     // Tách chuỗi URL thành một mảng các tham số
+//     var urlParams = currentUrl.split("?");
+    
+//     // Lấy phần tử cuối cùng trong mảng, chứa tham số roomID và scheduleId
+//     var lastParam = urlParams[urlParams.length - 1];
+    
+//     // Tách giá trị của roomID từ chuỗi tham số bằng cách tách chuỗi bằng dấu "=" và lấy phần tử thứ 1 (với giả thiết rằng giá trị roomID luôn là phần tử thứ 1 sau dấu "=")
+//     var roomId = lastParam.split("=")[1].split("?")[0];
+
+//     return roomId;
+// }
+
+function getAllUrlParams(url) {
+    var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+    var obj = {};
+    if (queryString) {
+  
+      queryString = queryString.split('#')[0];
+  
+      var arr = queryString.split('&');
+  
+      for (var i = 0; i < arr.length; i++) {
+        var a = arr[i].split('=');
+  
+        var paramName = a[0];
+        var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+  
+        paramName = paramName.toLowerCase();
+        if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+  
+        if (paramName.match(/\[(\d+)?\]$/)) {
+  
+          var key = paramName.replace(/\[(\d+)?\]/, '');
+          if (!obj[key]) obj[key] = [];
+  
+          if (paramName.match(/\[\d+\]$/)) {
+            var index = /\[(\d+)\]/.exec(paramName)[1];
+            obj[key][index] = paramValue;
+          } else {
+            obj[key].push(paramValue);
+          }
+        } else {
+          if (!obj[paramName]) {
+            obj[paramName] = paramValue;
+          } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+            obj[paramName] = [obj[paramName]];
+            obj[paramName].push(paramValue);
+          } else {
+            obj[paramName].push(paramValue);
+          }
+        }
+      }
+    }
+  
+    return obj;
+  }
 
 

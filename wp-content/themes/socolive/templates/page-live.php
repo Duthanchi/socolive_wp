@@ -22,21 +22,20 @@ get_header();
       <div class="live-room-box inner">
         <div class="media">
           <div class="top-block">
-            <div class="top-left-block"><img class="head-img avatar"
-                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/b8db6a3671785f23d40ee6dda4d52e3e_ss300.jpg"
-                data-src="https://sta.vnres.co/file/head/20221103/b8db6a3671785f23d40ee6dda4d52e3e_ss300.jpg"
-                data-src-backup="https://sta.vnres.co/file/head/20221103/b8db6a3671785f23d40ee6dda4d52e3e.jpg">
+            <div class="top-left-block">
+              <img class="head-img avatar"
+              >
               <div class="text">
-                <p class="text-title ellipsis">NBA - Golden State Warriors vs Philadelphia 76ers</p>
-                <p class="text-msg"><span class="nickName">BRIANN</span> <span class="room-num" i18n-text="房间号">Số
-                    phòng:122591</span> <span class="view-num">22065</span> <span class="mobile-text" hidden=""
+                <p class="text-title ellipsis"></p>
+                <p class="text-msg"><span class="nickName"></span> <span class="room-num" i18n-text="房间号"></span> 
+                <span class="view-num"></span> <span class="mobile-text" hidden=""
                     style="display: inline;"><a target="_blank" href="https://socolive10.tv/download/"
                       i18n-text="下载APP可投屏电视">Tải APP có thể kết nối với tivi</a></span></p>
               </div>
             </div>
             <div class="top-right-block"><a href="javascript:;" class="follow" id="follow" i18n-text="关注">Follow</a> <a
                 href="javascript:;" class="get-code"><img
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-room-code.png"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-room-code.png"
                   class="smallcode">
                 <div class="showBigCode"><b class="arrow-up"></b>
                   <div><canvas id="qrCodeCanvas" class="bigCode" height="120" width="120"
@@ -44,7 +43,7 @@ get_header();
                     i18n-text="手机同步观看直播">Đồng bộ điện thoại xem trực tiếp</span>
                 </div>
               </a><a href="javascript:;" class="feedback">Phản hồi</a><a href="javascript:;" class="more"><img
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-more-down.png">
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-more-down.png">
                 <div class="more-box"><b class="arrow-up"></b>
                   <div class="report item" i18n-text="举报">Báo cáo</div>
                 </div>
@@ -52,9 +51,9 @@ get_header();
           </div>
           <div class="center-block" style="height: 685.924px;">
             <link rel="stylesheet"
-              href="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/video.css">
+              href="<?php echo get_template_directory_uri(); ?>/assets/css/video.css">
             <link rel="stylesheet"
-              href="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/video(1).css">
+              href="<?php echo get_template_directory_uri(); ?>/assets/css/video(1).css">
             <div class="video-player">
               <div id="video-player-tag" tag="liveRoom"></div>
               <div id="dplayer" class="dplayer"><video name="videoElement" style="width:100%;height:100%"
@@ -62,7 +61,7 @@ get_header();
                   src="blob:https://socolive10.tv/959c1771-3db7-4951-9535-b788c6c8c2ad">Your browser is too old which
                   doesn't support HTML5 video.</video>
               </div><img class="big-play-btn"
-                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/play.png" hidden=""
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/play.png" hidden=""
                 style="display: inline;">
               <div class="min-screen-mark" hidden="">
                 <div class="min-screen-ctrl">
@@ -118,7 +117,7 @@ get_header();
                   <div class="send-danmu" hidden="" style="display: none;">
                     <div class="send-danmu-input"><span class="send-danmu-login">Đăng nhập</span>
                       <div id="fullScreenInput" contenteditable="false"></div><img
-                        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/face.png"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/face.png"
                         id="fullScreenEmoji" alt="">
                       <div class="emoji-panel" hidden="">
                         <div class="browBox">
@@ -208,14 +207,14 @@ get_header();
                         nhạy cảm và tài khoản sẽ bị chặn nếu vi phạm nhiều lần!</div>
                     </div><button class="send-danmu-enter cgcolor">Gửi</button>
                     <div class="send-danmu-gift"><img
-                        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/gift.png"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/gift.png"
                         id="fullScreenGift">
                       <div class="gift-block" hidden="">
                         <div class="gift-top">
                           <div class="gift" data-id="5">
                             <div class="img">
                               <img
-                                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/d11f9bd71eebe3637faedde4aa7ef9b7"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/d11f9bd71eebe3637faedde4aa7ef9b7"
                                 alt="" srcset="">
                             </div>
                             <div class="gift-name">TV</div>
@@ -224,7 +223,7 @@ get_header();
                           <div class="gift" data-id="6">
                             <div class="img">
                               <img
-                                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/5a8a2ca78b4e45c66608bef7dbf92f53"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/5a8a2ca78b4e45c66608bef7dbf92f53"
                                 alt="" srcset="">
                             </div>
                             <div class="gift-name">Kho báu</div>
@@ -233,7 +232,7 @@ get_header();
                           <div class="gift" data-id="7">
                             <div class="img">
                               <img
-                                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/33a04170cb9f482bcf50cdd6859d986e"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/33a04170cb9f482bcf50cdd6859d986e"
                                 alt="" srcset="">
                             </div>
                             <div class="gift-name">Hỏa tiễn</div>
@@ -266,9 +265,9 @@ get_header();
                 <div id="refresh">Làm mới</div>
               </div>
               <div class="loading" id="videoLoading" hidden=""><img class="imgRotate"
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/loading.png"> <img
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.png"> <img
                   class="loading-logo"
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/loading-logo.png">
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/loading-logo.png">
                 <p>Đang tải...</p>
               </div>
               <div class="bullet-wrapper">
@@ -281,12 +280,12 @@ get_header();
             src="<?php echo get_template_directory_uri(); ?>/assets/js/BulletScreenEngine.all.min.js"></script>>
           </div>
           <div class="how-getpoints" hidden=""><i class="close-icon"><img
-                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-close.png" alt=""></i>
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-close.png" alt=""></i>
             <div class="how">
               <h3 i18n-text="如何获取金币">Hướng dẫn nhận điểm</h3>
               <div class="step">
                 <div class="step-icon"><img
-                    src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/score-tip1.png"></div>
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/score-tip1.png"></div>
                 <div class="step-msg">
                   <h5 i18n-text="登录获取金币">Đăng nhập để nhận điểm</h5>
                   <p i18n-text="每日登录可获得,连续登录天数越长,金币越多">Đăng nhập mỗi ngày để nhận điểm. Số ngày đăng nhập càng nhiều,
@@ -295,7 +294,7 @@ get_header();
               </div>
               <div class="step">
                 <div class="step-icon"><img
-                    src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/score-tip2.png"></div>
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/score-tip2.png"></div>
                 <div class="step-msg">
                   <h5 i18n-text="观看直播获得金币">Xem BLV/MC live để nhận điểm</h5>
                   <p v-text="每观看十分钟直播，可以获得5点金币">10 phút xem live, nhận về 5 điểm</p>
@@ -312,7 +311,7 @@ get_header();
         </div>
         <div class="chat">
           <div class="notice"><span class="notice-title"><img class="notice-icon"
-                src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-announcement@2x.png"> <b
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-announcement@2x.png"> <b
                 i18n-text="公告">Thông báo:</b> </span><span class="notice-text">09h00 NBA - Golden State Warriors vs
               Philadelphia 76ers<br>Anh em nào muốn tham gia trải nghiệm b sport qua bty521 hoặc tham gia vào nhóm bóng
               rổ của Brian hãy nhớ kết bạn với Sóc qua thông tin bên góc phải dưới màn hình nhé.<br>Chúc anh em may
@@ -324,7 +323,7 @@ get_header();
           <div class="chat-center" style="height: 534.924px;">
             <div class="chat-panel" id="talkScroll">
               <div class="reconnect-tip" style="display: none;"><img
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/loading.gif"> <span>Đang kết
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif"> <span>Đang kết
                   nối ... vui lòng đợi!</span></div>
               <div class="chat-list z-chat-list" id="chat-list">
                 <div>
@@ -332,7 +331,7 @@ get_header();
 
 
                     <!-- 系统消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/system_message.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/system_message.png"
                       class="system-img vertical-middle">
 
 
@@ -355,7 +354,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv5.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv5.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -370,7 +369,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -385,7 +384,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv3.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv3.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -400,7 +399,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv3.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv3.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -415,7 +414,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -430,7 +429,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -445,7 +444,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -460,7 +459,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -475,7 +474,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv2.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv2.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -490,7 +489,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv2.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv2.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -505,7 +504,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv2.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv2.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -521,7 +520,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv2.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv2.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -537,7 +536,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -545,7 +544,7 @@ get_header();
 
                     <!-- 用户消息内容 -->
                     <span class="user-content vertical-middle"><img class="chat-point-img"
-                        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/chat-point.svg">phi
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/chat-point.svg">phi
                       điểu&nbsp; chắc ông tuyệt vọng lắm&nbsp; hahaa</span>
                   </div>
                   <div class="chat-item danmaku-item  " data-id="18073740" data-flag="1679718094219">
@@ -554,7 +553,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -569,7 +568,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -584,7 +583,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -599,7 +598,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -614,7 +613,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -629,7 +628,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv2.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv2.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -637,7 +636,7 @@ get_header();
 
                     <!-- 用户消息内容 -->
                     <span class="user-content vertical-middle"><img class="chat-point-img"
-                        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/chat-point.svg">chơi
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/chat-point.svg">chơi
                       sợ thua&nbsp; cái gì cũng có thể xảy ra</span>
                   </div>
                   <div class="chat-item danmaku-item  " data-id="18073785" data-flag="1679718117680">
@@ -646,7 +645,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -660,12 +659,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
 
@@ -678,7 +677,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -686,13 +685,13 @@ get_header();
 
                     <!-- 用户消息内容 -->
                     <span class="user-content vertical-middle"><img class="chat-point-img"
-                        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/chat-point.svg">phi
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/chat-point.svg">phi
                       điểu&nbsp; ok tui khấn với ông nhé</span>
                   </div>
                   <div class="chat-item danmaku-item  " data-id="18073817" data-flag="1679718126902">
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -707,7 +706,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -722,7 +721,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv2.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv2.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -730,7 +729,7 @@ get_header();
 
                     <!-- 用户消息内容 -->
                     <span class="user-content vertical-middle"><img class="chat-point-img"
-                        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/chat-point.svg">chơi
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/chat-point.svg">chơi
                       sợ thua&nbsp; ok cảm ơn ông</span>
                   </div>
                   <div class="chat-item danmaku-item sys-msg active">
@@ -738,12 +737,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
 
@@ -755,12 +754,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
 
@@ -772,12 +771,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
 
@@ -790,7 +789,7 @@ get_header();
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -804,12 +803,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv4.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv4.png"
                       class="v-class vertical-middle">
 
 
@@ -821,12 +820,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv3.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv3.png"
                       class="v-class vertical-middle">
 
 
@@ -838,12 +837,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv1.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv1.png"
                       class="v-class vertical-middle">
 
 
@@ -852,7 +851,7 @@ get_header();
                   </div>
                   <div class="chat-item danmaku-item  " data-id="18073883" data-flag="1679718002708">
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv3.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv3.png"
                       class="v-class vertical-middle">
 
                     <!-- 普通发送人名称 -->
@@ -874,12 +873,12 @@ get_header();
 
 
                     <!-- 欢迎消息图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/hi.png" alt=""
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hi.png" alt=""
                       class="hi vertical-middle">
 
 
                     <!-- 普通用户发送消息VIP图标 -->
-                    <img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/lv3.png"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/lv3.png"
                       class="v-class vertical-middle">
 
 
@@ -891,10 +890,10 @@ get_header();
               <div class="gift-effects-wrapper">
               </div>
               <div class="forbidden-user-tip" hidden=""><img class="forbidden-close"
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-close.png" alt="关闭">
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-close.png" alt="关闭">
                 <div class="user-msg">
                   <div class="user-avatar"><img
-                      src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/avatar.png"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/avatar.png"
                       alt="avatar"></div>
                   <div class="user-name">***</div>
                 </div>
@@ -902,10 +901,10 @@ get_header();
                 <div class="user-btn" i18n-text="解除禁言" hidden="">Hủy tắt tiếng</div>
               </div>
               <div class="forbidden-tip" hidden=""><img class="forbidden-close"
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-close.png" alt="关闭">
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-close.png" alt="关闭">
                 <div class="user-msg">
                   <div class="user-avatar"><img
-                      src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/avatar.png"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/avatar.png"
                       alt="avatar"></div>
                   <div class="user-name">***</div>
                 </div>
@@ -935,7 +934,7 @@ get_header();
                 </div>
               </div>
               <div class="forbidden-sure-tip" hidden=""><img class="forbidden-sure-close"
-                  src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/icon-close.png" alt="关闭">
+                  src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-close.png" alt="关闭">
                 <div class="forbidden-sure-text" i18n-text="将该用户在全站禁言30天吗？">Người dùng này trong toàn bộ trang <span>Tắt
                     tiếng30Ngày</span> Đúng không ？</div>
                 <div class="forbidden-sure-btn" i18n-text="确定">Xác nhận</div>
@@ -956,13 +955,13 @@ get_header();
                 <div class="gift-list">
                   <div class="gift-item">
                     <img
-                      src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/d11f9bd71eebe3637faedde4aa7ef9b7"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/d11f9bd71eebe3637faedde4aa7ef9b7"
                       class="gift-icon">
                     <div class="gift-block ts-dot arrow-bottom an-scale-in-ease">
                       <div class="subbox">
                         <div class="gift-msg">
                           <img class="gift-img"
-                            src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/d11f9bd71eebe3637faedde4aa7ef9b7">
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/d11f9bd71eebe3637faedde4aa7ef9b7">
                           <div class="gift-text">
                             <div class="gift-name">TV</div>
                             <div class="gift-number" data-number="50">50 điểm</div>
@@ -974,13 +973,13 @@ get_header();
                   </div>
                   <div class="gift-item">
                     <img
-                      src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/5a8a2ca78b4e45c66608bef7dbf92f53"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/5a8a2ca78b4e45c66608bef7dbf92f53"
                       class="gift-icon">
                     <div class="gift-block ts-dot arrow-bottom an-scale-in-ease">
                       <div class="subbox">
                         <div class="gift-msg">
                           <img class="gift-img"
-                            src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/5a8a2ca78b4e45c66608bef7dbf92f53">
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/5a8a2ca78b4e45c66608bef7dbf92f53">
                           <div class="gift-text">
                             <div class="gift-name">Kho báu</div>
                             <div class="gift-number" data-number="100">100 điểm</div>
@@ -992,13 +991,13 @@ get_header();
                   </div>
                   <div class="gift-item">
                     <img
-                      src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/33a04170cb9f482bcf50cdd6859d986e"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/images/33a04170cb9f482bcf50cdd6859d986e"
                       class="gift-icon">
                     <div class="gift-block ts-dot arrow-bottom an-scale-in-ease">
                       <div class="subbox">
                         <div class="gift-msg">
                           <img class="gift-img"
-                            src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/33a04170cb9f482bcf50cdd6859d986e">
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/33a04170cb9f482bcf50cdd6859d986e">
                           <div class="gift-text">
                             <div class="gift-name">Hỏa tiễn</div>
                             <div class="gift-number" data-number="200">200 điểm</div>
@@ -1144,8 +1143,8 @@ get_header();
     <div class="feedback-window" hidden="">
       <div class="big-title">
         <img class="feedback-icon"
-          src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/feedback.svg">
-        <img class="close-icon" src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/close.svg">
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/feedback.svg">
+        <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/close.svg">
         <span>Phản hồi<!--反馈--></span>
       </div>
 
@@ -1175,14 +1174,14 @@ get_header();
     </div>
     <div class="feedback-mode" hidden=""></div>
   </div>
-  <link rel="stylesheet" href="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/chat.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/images/chat.css">
   <div class="chat-wrapper private-chat private-chat-liveRoom" hidden="">
     <div class="opts"><img class="close"
-        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/close(1).png"></div><img
-      class="chat-loading" src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/loading.gif"
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/close(1).png"></div><img
+      class="chat-loading" src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif"
       hidden="">
     <div class="chat-tip" hidden=""><span i18n-text="消息同步中">Tin nhắn đang đồng bộ</span> <img
-        src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/loading.gif" hidden=""></div>
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/loading.gif" hidden=""></div>
     <div class="word-content"></div>
     <div class="send-word">
       <div class="send-word-opts">
@@ -1273,7 +1272,7 @@ get_header();
       </div>
       <div class="send-content"><textarea type="text" maxlength="140"></textarea></div>
     </div>
-    <div class="refresh"><img src="./NBA - Golden State Warriors vs Philadelphia 76ers - Socolive_files/refresh.svg">
+    <div class="refresh"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/refresh.svg">
       <div i18n-text="同步最新消息">Đồng bộ tin nhắn mới nhất</div>
     </div>
   </div>
