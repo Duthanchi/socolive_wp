@@ -872,23 +872,18 @@
             $("".concat(e).concat(r, ".lazyload")).lazyload().removeClass("lazyload")
         },
         getRoomNum: function() {
-            for (var t = "", e = location.pathname.split("/"), n = 0; n < e.length; n++)
-                if ("room" == e[n] && e[n + 1]) {
-                    t = e[n + 1];
-                    break
-                }
-            return t || (t = this.getUrlParam("roomNum")),
-            t
+            var currentUrl = window.location.href;
+            var roomID = getAllUrlParams(currentUrl).roomid;
+            return parseInt(roomID);
         },
         roomUrl: function(t) {
+            
             const today = new Date();
             const yyyy = today.getFullYear();
             let mm = today.getMonth() + 1; // Months start at 0!
             let dd = today.getDate();
-
             if (dd < 10) dd = '0' + dd;
             if (mm < 10) mm = '0' + mm;
-
             const formattedToday = dd + '-' + mm + '-' + yyyy;
 
             var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""
