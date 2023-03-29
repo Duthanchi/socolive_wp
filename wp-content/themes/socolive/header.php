@@ -9,8 +9,6 @@
 	<meta name="description" content="Blog Site Template">
 	<meta name="author" content="socolive">
 	<link rel="shortcut icon" href="/wp-content/theme/socolive/images/logo.jpg">
-	<!-- <script type="text/javascript" async="" charset="utf-8"
-    src="./Socolive - Trực tiếp bóng đá tốc độ cao không quảng cáo Full HD_files/core.php"></script> -->
 	<?php
 	wp_head()
 		?>
