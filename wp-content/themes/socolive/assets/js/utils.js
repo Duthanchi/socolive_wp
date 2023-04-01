@@ -9,7 +9,10 @@
             UPLOAD_FILE: "//file.vnres.co/upload",
             REQ_FILE: "//sta.vnres.co/file"
         },
-        baseUrl: "https://socolive10.tv/webApi",
+        baseUrl: "https://cors-anywhere.herokuapp.com/"+"https://socolive10.tv/webApi",
+        // baseUrl: "http://localhost:8080/api",``
+        // baseUrl: "http://localhost:8080?https://socolive10.tv/webApi",
+        // baseUrl: "https://socolive10.tv/webApi",
         h5Url: "http://m.soco.live",
         websocketUrl: "wss://ws.vnres.co:443",
         downloadAppUrl: "/download/",

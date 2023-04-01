@@ -87,8 +87,8 @@ function socolive_register_scripts()
     wp_enqueue_script('socolive-flv', get_template_directory_uri() . "/assets/js/flv.min.js", array(), '1.0', true);
     wp_enqueue_script('socolive-hls', get_template_directory_uri() . "/assets/js/hls.js", array(), '1.0', true);
     wp_enqueue_script('socolive-DPlayer', get_template_directory_uri() . "/assets/js/DPlayer.min.js", array(), '1.0', true);
-    wp_enqueue_script('socolive-header', get_template_directory_uri() . "/assets/js/header.js", array(), '1.0', true);
     wp_enqueue_script('socolive-utils', get_template_directory_uri() . "/assets/js/utils.js", array(), '1.0', true);
+    wp_enqueue_script('socolive-header', get_template_directory_uri() . "/assets/js/header.js", array(), '1.0', true);
     wp_enqueue_script('socolive-index', get_template_directory_uri() . "/assets/js/index.js", array(), '1.0', true);
     wp_enqueue_script('socolive-footer', get_template_directory_uri() . "/assets/js/footer.js", array(), '1.0', true);
     wp_enqueue_script('socolive-foot', get_template_directory_uri() . "/assets/js/foot.js", array(), '1.0', true);

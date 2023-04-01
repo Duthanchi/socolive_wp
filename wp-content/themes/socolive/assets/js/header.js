@@ -1176,12 +1176,12 @@
             u.default.loadImg("avatar", ".header-wrapper "),
             $(".register-window .check-box .check-img").click((function() {
                 var e = $(".register-window").find(".phone-box .input-phone").val();
-                $(".register-window .check-box .check-img").attr("src", "".concat(t.default.baseUrl, "/api/kaptcha?t=").concat((new Date).getTime(), "&mobile=").concat(e))
+                $(".register-window .check-box .check-img").attr("src", "".concat("https://socolive10.tv/webApi", "/api/kaptcha?t=").concat((new Date).getTime(), "&mobile=").concat(e))
             }
             )),
             $(".register-window .captcahr-box .check-img").click((function() {
                 var e = $(".register-window").find(".phone-box .input-account").val();
-                $(".register-window .captcahr-box .check-img").attr("src", "".concat(t.default.baseUrl, "/api/kaptcha?t=").concat((new Date).getTime(), "&mobile=").concat(e))
+                $(".register-window .captcahr-box .check-img").attr("src", "".concat("https://socolive10.tv/webApi", "/api/kaptcha?t=").concat((new Date).getTime(), "&mobile=").concat(e))
             }
             )),
             $(".login-window .remeber-box .gou").click((function() {
