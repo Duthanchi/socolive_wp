@@ -9,7 +9,9 @@
             UPLOAD_FILE: "//file.vnres.co/upload",
             REQ_FILE: "//sta.vnres.co/file"
         },
-        baseUrl: "https://socolive10.tv/webApi",
+        // baseUrl: "http://localhost:80/https://socolive10.tv/webApi",
+        // baseUrl: "http://localhost:80/https://socophp.com/webApi",
+        baseUrl: "http://localhost:80/https://chat.chatvb.co/webApi",
         h5Url: "http://m.soco.live",
         websocketUrl: "wss://ws.vnres.co:443",
         downloadAppUrl: "/download/",
@@ -138,6 +140,7 @@
                             $(".header-wrapper .had-login .avatar-submenu .nickname").text(t.nickName)
                     },
                     isUser: function (t, e) {
+                        debugger;
                         window.localStorage.setItem("isUser", JSON.stringify(t)),
                             1 != t && ($(".header-wrapper").find(".had-login").hide(),
                                 $(".header-wrapper").find(".no-login").show())
