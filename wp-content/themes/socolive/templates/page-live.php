@@ -210,7 +210,7 @@ get_header();
                         <div class="gift" data-id="5">
                           <div class="img">
                             <img
-                              src="<?php echo get_template_directory_uri(); ?>/assets/images/d11f9bd71eebe3637faedde4aa7ef9b7"
+                              src=""
                               alt="" srcset="">
                           </div>
                           <div class="gift-name">TV</div>
@@ -219,7 +219,7 @@ get_header();
                         <div class="gift" data-id="6">
                           <div class="img">
                             <img
-                              src="<?php echo get_template_directory_uri(); ?>/assets/images/5a8a2ca78b4e45c66608bef7dbf92f53"
+                              src=""
                               alt="" srcset="">
                           </div>
                           <div class="gift-name">Kho báu</div>
@@ -228,7 +228,7 @@ get_header();
                         <div class="gift" data-id="7">
                           <div class="img">
                             <img
-                              src="<?php echo get_template_directory_uri(); ?>/assets/images/33a04170cb9f482bcf50cdd6859d986e"
+                              src=""
                               alt="" srcset="">
                           </div>
                           <div class="gift-name">Hỏa tiễn</div>
