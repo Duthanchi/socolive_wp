@@ -203,3 +203,86 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    background: #f8c21b;
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+
+.navbar-brand img {
+	height: 50px !important;
+	width: 160px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+   color: #fff;
+}
+.navbar-expand-md .navbar-collapse{
+	font-size: 18px;
+}
+
+.apply-menu {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.apply-menu a {
+    color: #ffb600;
+    background: 0 0
+}
+
+.apply-menu a:hover {
+    color: #ffb600 !important;
+}
+
+.apply-menu,
+.had-login{
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle
+}
+
+.no-login {
+	font-size: 16px;
+    vertical-align: middle;
+}
+
+.header-login,
+.header-register{
+	color: #fff;
+	color: #fff;
+}
+
+.header-login:hover, .header-register:hover{
+	color: #ffb600;
+	cursor: pointer
+}
+
+.division {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 6px;
+    background: #fff;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* @media (min-width: 768px){
+	.no-login {
+		display: -webkit-box!important;
+		justify-content: center;
+	}
+} */
+
+.header-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 101
+}

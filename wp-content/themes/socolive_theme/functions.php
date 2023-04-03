@@ -529,6 +529,11 @@ function socolive_scripts_loader() {
 	// 1. Styles.
 	wp_enqueue_style( 'style', get_theme_file_uri( 'style.css' ), array(), $theme_version, 'all' );
 	wp_enqueue_style( 'main', get_theme_file_uri( 'assets/dist/main.css' ), array(), $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles.
+	wp_enqueue_style( 'iconfont', get_theme_file_uri( 'assets/dist/iconfont.css' ), array(), $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles.
+	wp_enqueue_style( 'iconfont(1)', get_theme_file_uri( 'assets/dist/iconfont(1).css' ), array(), $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles.
+	wp_enqueue_style( 'header', get_theme_file_uri( 'assets/css/header.css' ), array(), $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles.
+
+	
 
 	if ( is_rtl() ) {
 		wp_enqueue_style( 'rtl', get_theme_file_uri( 'assets/dist/rtl.css' ), array(), $theme_version, 'all' );
@@ -536,6 +541,8 @@ function socolive_scripts_loader() {
 
 	// 2. Scripts.
 	wp_enqueue_script( 'mainjs', get_theme_file_uri( 'assets/dist/main.bundle.js' ), array(), $theme_version, true );
+	wp_enqueue_script( 'loginjs', get_theme_file_uri( 'assets/js/login.js' ), array(), $theme_version, true );
+	// wp_enqueue_script( 'md5', "https://cdnjs.cloudflare.com/ajax/libs/js-md5/0.7.3/md5.min.js", array(), '0.7.3', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
