@@ -27,11 +27,9 @@ get_header();
               data-src=""
               data-src-backup="">
             <div class="text">
-              <p class="text-title ellipsis">CRC D1: Perez Zeledon vs Puntarenas</p>
-              <p class="text-msg"><span class="nickName">BLV CHRIS</span> <span class="room-num" i18n-text="房间号">Số
-                  phòng:158841</span> <span class="view-num">27324</span> <span class="mobile-text" hidden=""
-                  style="display: inline;"><a target="_blank" href="/download/" i18n-text="下载APP可投屏电视">Tải APP có thể
-                    kết nối với tivi</a></span></p>
+              <p class="text-title ellipsis"></p>
+              <p class="text-msg"><span class="nickName"></span> <span class="room-num" i18n-text="房间号"></span> <span class="view-num">27324</span> <span class="mobile-text" hidden=""
+                  style="display: inline;"><a target="_blank" href="/download/" i18n-text="下载APP可投屏电视"></a></span></p>
             </div>
           </div>
           <div class="top-right-block"><a href="javascript:;" class="follow" id="follow" i18n-text="关注">Follow</a> <a
@@ -115,91 +113,7 @@ get_header();
                   <div class="send-danmu-input"><span class="send-danmu-login">Đăng nhập</span>
                     <div id="fullScreenInput" contenteditable="false"></div><img
                       src="<?php echo get_template_directory_uri(); ?>/assets/images/face.png" id="fullScreenEmoji"
-                      alt="">
-                    <div class="emoji-panel" hidden="">
-                      <div class="browBox">
-                        <ul>
-                          <li data-id="grinning">😀</li>
-                          <li data-id="grin">😁</li>
-                          <li data-id="smiley">😃</li>
-                          <li data-id="smile">😄</li>
-                          <li data-id="sweat_smile">😅</li>
-                          <li data-id="laughing">😆</li>
-                          <li data-id="innocent">😇</li>
-                          <li data-id="wink">😉</li>
-                          <li data-id="blush">😊</li>
-                          <li data-id="slightly_smiling_face">🙂</li>
-                          <li data-id="yum">😋</li>
-                          <li data-id="heart_eyes">😍</li>
-                          <li data-id="kissing_heart">😘</li>
-                          <li data-id="kissing">😗</li>
-                          <li data-id="kissing_smiling_eyes">😙</li>
-                          <li data-id="kissing_closed_eyes">😚</li>
-                          <li data-id="stuck_out_tongue_winking_eye">😜</li>
-                          <li data-id="stuck_out_tongue_closed_eyes">😝</li>
-                          <li data-id="stuck_out_tongue">😛</li>
-                          <li data-id="sunglasses">😎</li>
-                          <li data-id="roll_eyes">🙄</li>
-                          <li data-id="flushed">😳</li>
-                          <li data-id="rage">😡</li>
-                          <li data-id="confused">😕</li>
-                          <li data-id="tired_face">😫</li>
-                          <li data-id="triumph">😤</li>
-                          <li data-id="fearful">😨</li>
-                          <li data-id="disappointed_relieved">😥</li>
-                          <li data-id="sleepy">😪</li>
-                          <li data-id="sweat">😓</li>
-                          <li data-id="dizzy_face">😵</li>
-                          <li data-id="astonished">😲</li>
-                          <li data-id="sneezing_face">🤧</li>
-                          <li data-id="mask">😷</li>
-                          <li data-id="face_with_thermometer">🤒</li>
-                          <li data-id="face_with_head_bandage">🤕</li>
-                          <li data-id="sleeping">😴</li>
-                          <li data-id="zzz">💤</li>
-                          <li data-id="clap">👏</li>
-                          <li data-id="call_me_hand">🤙</li>
-                          <li data-id="+1">👍</li>
-                          <li data-id="-1">👎</li>
-                          <li data-id="facepunch">👊</li>
-                          <li data-id="fist">✊</li>
-                          <li data-id="v">✌</li>
-                          <li data-id="ok_hand">👌</li>
-                          <li data-id="raised_hand">✋</li>
-                          <li data-id="raised_back_of_hand">🤚</li>
-                          <li data-id="muscle">💪</li>
-                          <li data-id="handshake">🤝</li>
-                          <li data-id="point_left">👈</li>
-                          <li data-id="point_right">👉</li>
-                          <li data-id="fu">🖕</li>
-                          <li data-id="raised_hand_with_fingers_splayed">🖐</li>
-                          <li data-id="lips">👄</li>
-                          <li data-id="ear">👂</li>
-                          <li data-id="eyes">👀</li>
-                          <li data-id="santa">🎅</li>
-                          <li data-id="sun_with_face">🌞</li>
-                          <li data-id="crescent_moon">🌙</li>
-                          <li data-id="star">⭐</li>
-                          <li data-id="zap">⚡</li>
-                          <li data-id="fire">🔥</li>
-                          <li data-id="snowflake">❄️</li>
-                          <li data-id="soccer">⚽</li>
-                          <li data-id="basketball">🏀</li>
-                          <li data-id="football">🏈</li>
-                          <li data-id="baseball">⚾</li>
-                          <li data-id="gift">🎁</li>
-                          <li data-id="tada">🎉</li>
-                          <li data-id="black_nib">✒️</li>
-                          <li data-id="memo">📝</li>
-                          <li data-id="heart">❤️</li>
-                          <li data-id="yellow_heart">💛</li>
-                          <li data-id="green_heart">💚</li>
-                          <li data-id="vs">🆚</li>
-                          <li data-id="speech_balloon">💬</li>
-                          <li data-id="clock1">🕐</li>
-                        </ul>
-                      </div>
-                    </div>
+                      alt="">                   
                     <div class="message-tips show-tips" id="fullScreenTips" hidden="">Vui lòng không đăng nội dung
                       nhạy cảm và tài khoản sẽ bị chặn nếu vi phạm nhiều lần!</div>
                   </div><button class="send-danmu-enter cgcolor">Gửi</button>
@@ -276,36 +190,35 @@ get_header();
         <div class="how-getpoints" hidden=""><i class="close-icon"><img
               src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-close.png" alt=""></i>
           <div class="how">
-            <h3 i18n-text="如何获取金币">Hướng dẫn nhận điểm</h3>
+            <h3 i18n-text="如何获取金币"></h3>
             <div class="step">
               <div class="step-icon"><img
                   src="<?php echo get_template_directory_uri(); ?>/assets/images/score-tip1.png"></div>
               <div class="step-msg">
-                <h5 i18n-text="登录获取金币">Đăng nhập để nhận điểm</h5>
-                <p i18n-text="每日登录可获得,连续登录天数越长,金币越多">Đăng nhập mỗi ngày để nhận điểm. Số ngày đăng nhập càng nhiều,
-                  điểm càng nhiều.</p>
+                <h5 i18n-text="登录获取金币"></h5>
+                <p i18n-text="每日登录可获得,连续登录天数越长,金币越多"></p>
               </div>
             </div>
             <div class="step">
               <div class="step-icon"><img
                   src="<?php echo get_template_directory_uri(); ?>/assets/images/score-tip2.png"></div>
               <div class="step-msg">
-                <h5 i18n-text="观看直播获得金币">Xem BLV/MC live để nhận điểm</h5>
-                <p v-text="每观看十分钟直播，可以获得5点金币">10 phút xem live, nhận về 5 điểm</p>
+                <h5 i18n-text="观看直播获得金币"></h5>
+                <p v-text="每观看十分钟直播，可以获得5点金币"></p>
               </div>
             </div>
           </div>
         </div>
         <div class="send-gift-error" hidden=""><i class="close-icon close"></i>
           <div class="gift-error-msg">
-            <p>Điểm không đủ, chưa thể tặng quà</p>
-            <div class="close">Tôi đã rõ</div>
+            <p></p>
+            <div class="close"></div>
           </div>
         </div>
       </div>
-        <!-- Add short code chat -->
+          <!-- Add short code chat -->
         <?php
-          echo do_shortcode('[soco_chat_form]');
+              echo do_shortcode('[soco_chat_form]');
         ?>
     </div>
   </div>
