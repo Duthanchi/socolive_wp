@@ -40,9 +40,13 @@
       </div>
       <div class="header-right">
         <div class="apply-menu"><a href="javascript:void(0)">Ứng tuyển BLV</a></div>
-        <div class="no-login" style=""><span class="header-login"><i class="iconfont ali-denglu"></i><span
-              i18n-text="登录">Đăng nhập</span></span>
-          <div class="division"></div><span class="header-register" i18n-text="注册">Đăng ký</span>
+        <div class="no-login" style="display:none">
+          <span class="header-login">
+            <i class="iconfont ali-denglu"></i>
+            <span i18n-text="登录">Đăng nhập</span>
+          </span>
+          <div class="division"></div>
+          <span class="header-register" i18n-text="注册">Đăng ký</span>
         </div>
         <div class="had-login" style="display:none">
           <div class="header-subscribe"><i class="iconfont ali-wodeyuyue icon-subscribe"></i> <span i18n-text="预约">Đặt
