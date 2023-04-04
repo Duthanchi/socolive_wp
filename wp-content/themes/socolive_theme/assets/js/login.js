@@ -79,8 +79,8 @@ jQuery(document).ready(function($) {
     });
 
     $(".check-box").find(".input-check").change(function() {
-
-        var len = $(".captcha-box").find(".input-check").val().length;
+        debugger;
+        var len = $(".check-box").find(".input-check").val().length;
         if (len != 5) {
 
             $(".register-window").find(".check-box > .error-tip > span").removeAttr("hidden");
