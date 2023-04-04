@@ -1,23 +1,23 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
     let is_validate = false;
     //Show and hide model login and register
-    $(".header-login").click(function () {
+    $(".header-login").click(function() {
         $(".header-modal").removeAttr("hidden");
         $(".login-window").removeAttr("hidden");
     });
 
-    $(".header-register").click(function () {
+    $(".header-register").click(function() {
         $(".header-modal").removeAttr("hidden");
         $(".register-window").removeAttr("hidden");
     });
 
-    $("#close-login").click(function () {
+    $("#close-login").click(function() {
         $(".header-modal").attr("hidden", true);
         $(".login-window").attr("hidden", true);
     });
 
     // Active rememberme
-    $(".remeber-box .gou").click(function () {
+    $(".remeber-box .gou").click(function() {
         if ($(".remeber-box .gou").hasClass("active")) {
             $(".remeber-box .gou").removeClass("active");
         } else {
@@ -25,18 +25,18 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $("#close-register").click(function () {
+    $("#close-register").click(function() {
         $(".header-modal").attr("hidden", true);
         $(".register-window").attr("hidden", true);
     });
 
     // Show and implement dropdown country
-    $(".country-code-box").click(function () {
+    $(".country-code-box").click(function() {
         $(".country-code-list").removeAttr("hidden");
         $(".country-code-list").show();
     });
 
-    $(".login-window, .register-window").find(".country-code-item").click((function () {
+    $(".login-window, .register-window").find(".country-code-item").click((function() {
         var e = $(this).closest(".input-group").find(".country-code"),
             n = $(this).closest(".input-group").find(".input-phone");
         e.text($(this).find(".right").text()),
@@ -45,16 +45,14 @@ jQuery(document).ready(function ($) {
     }));
 
     // Register validate
-
-    $(".register-window").find(".input-phone").change(function () {
+    $(".register-window").find(".input-phone").change(function() {
 
         var len = $(".register-window").find(".input-phone").val().length;
 
         if (len == 0) {
             $(".check-box").attr("hidden", true);
             $(".check-box").hide();
-        }
-        else {
+        } else {
             $(".check-box").removeAttr("hidden");
             $(".check-box").show();
             $(".captcha-box").attr("hidden", true);
@@ -80,8 +78,8 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(".check-box").find(".input-check").change(function () {
-        debugger;
+    $(".check-box").find(".input-check").change(function() {
+
         var len = $(".captcha-box").find(".input-check").val().length;
         if (len != 5) {
 
@@ -95,13 +93,12 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(".register-window").find(".input-account").change(function () {
+    $(".register-window").find(".input-account").change(function() {
         var len = $(".register-window").find(".input-account").val().length;
         if (len == 0) {
             $(".captcha-box").attr("hidden", true);
             $(".captcha-box").hide();
-        }
-        else {
+        } else {
             $(".captcha-box").removeAttr("hidden");
             $(".captcha-box").show();
             $(".check-box").attr("hidden", true);
@@ -127,7 +124,7 @@ jQuery(document).ready(function ($) {
 
     });
 
-    $(".register-window").find(".input-nickname").change(function () {
+    $(".register-window").find(".input-nickname").change(function() {
         var len = $(".register-window").find(".input-nickname").val().length;
         if (len < 2) {
             $(".register-window").find(".nickname-box > .error-tip > span").removeAttr("hidden");
@@ -143,8 +140,8 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $(".captcha-box").find(".input-check").change(function () {
-        debugger;
+    $(".captcha-box").find(".input-check").change(function() {
+
         var len = $(".captcha-box").find(".input-check").val().length;
         if (len != 5) {
 
@@ -158,7 +155,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(".register-window").find(".input-password").change(function () {
+    $(".register-window").find(".input-password").change(function() {
         if ($(".register-window").find(".input-password").val().length > 5) {
             $(".register-window").find(".password-box > .error-tip > span").attr("hidden", true);
             $(".register-window").find(".password-box > .error-tip > span").hide();
@@ -171,7 +168,7 @@ jQuery(document).ready(function ($) {
     });
 
     // Login validate
-    $(".login-window").find(".input-phone").change(function () {
+    $(".login-window").find(".input-phone").change(function() {
         if ($(".login-window").find(".input-phone").val().length > 0) {
             $(".login-window").find(".input-account").prop('disabled', true);
             $(".login-window").find(".account-box > .error-tip > span").attr("hidden", true);
@@ -194,7 +191,7 @@ jQuery(document).ready(function ($) {
 
     });
 
-    $(".login-window").find(".input-account").change(function () {
+    $(".login-window").find(".input-account").change(function() {
 
         if ($(".login-window").find(".input-account").val().length > 0) {
             $(".login-window").find('.input-phone').prop('disabled', true);
@@ -214,7 +211,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(".login-window").find(".input-password").change(function () {
+    $(".login-window").find(".input-password").change(function() {
         if ($(".login-window").find(".input-password").val().length > 5) {
             $(".login-window").find(".password-box > .error-tip > span").attr("hidden", true);
             $(".login-window").find(".password-box > .error-tip > span").hide();
@@ -226,36 +223,34 @@ jQuery(document).ready(function ($) {
         }
     });
 
-
-
     // Control change type password
 
-    $(".login-window").find(".ali-biyan").click(function () {
-        debugger;
+    $(".login-window").find(".ali-biyan").click(function() {
+
         $(".login-window .ali-zhenyan").removeAttr("hidden");
         $(".login-window .ali-zhenyan").show();
         $(".login-window .ali-biyan").hide();
         $(".login-window .input-password").attr("type", "text");
     });
 
-    $(".login-window").find(".ali-zhenyan").click(function () {
-        debugger;
+    $(".login-window").find(".ali-zhenyan").click(function() {
+
         $(".login-window .ali-biyan").removeAttr("hidden");
         $(".login-window .ali-biyan").show();
         $(".login-window .ali-zhenyan").hide();
         $(".login-window .input-password").attr("type", "password");
     });
 
-    $(".register-window").find(".ali-biyan").click(function () {
-        debugger;
+    $(".register-window").find(".ali-biyan").click(function() {
+
         $(".register-window .ali-zhenyan").removeAttr("hidden");
         $(".register-window .ali-zhenyan").show();
         $(".register-window .ali-biyan").hide();
         $(".register-window .input-password").attr("type", "text");
     });
 
-    $(".register-window").find(".ali-zhenyan").click(function () {
-        debugger;
+    $(".register-window").find(".ali-zhenyan").click(function() {
+
         $(".register-window .ali-biyan").removeAttr("hidden");
         $(".register-window .ali-biyan").show();
         $(".register-window .ali-zhenyan").hide();
@@ -266,13 +261,13 @@ jQuery(document).ready(function ($) {
 
     // handle change login and register
 
-    $(".login-window").find(".register-jump").click(function () {
+    $(".login-window").find(".register-jump").click(function() {
         $(".login-window").attr("hidden", true);
         $(".register-window").removeAttr("hidden");
         $(".register-window").show();
     });
 
-    $(".register-window").find(".login-jump").click(function () {
+    $(".register-window").find(".login-jump").click(function() {
         $(".register-window").attr("hidden", true);
         $(".login-window").removeAttr("hidden");
         $(".login-window").show();
@@ -282,7 +277,7 @@ jQuery(document).ready(function ($) {
     const API_KEY_REQ = "PHp1st5vEg5Ca8FH";
     const API_KEY_RESP = "qlCJekfRKwWkQxl7";
 
-    $(".login-window .submit").click((function () {
+    $(".login-window .submit").click((function() {
 
         if (is_validate) {
 
@@ -326,7 +321,7 @@ jQuery(document).ready(function ($) {
                     type: "POST",
                     // dataType: "blob",
                     data: data,
-                    success: function (response) {
+                    success: function(response) {
 
                         console.log("response::::", response);
                         if (response && response.success) {
@@ -335,7 +330,7 @@ jQuery(document).ready(function ($) {
                             $("#error-message").text(response.message);
                         }
                     },
-                    error: function (xhr, status, error) {
+                    error: function(xhr, status, error) {
 
                         console.log(xhr.responseText);
                         console.log("status:", status);
@@ -365,7 +360,7 @@ jQuery(document).ready(function ($) {
                     type: "POST",
                     // dataType: "json",
                     data: data,
-                    success: function (response) {
+                    success: function(response) {
 
                         console.log(response);
                         if (response && response.success) {
@@ -374,7 +369,7 @@ jQuery(document).ready(function ($) {
                             $("#error-message").text(response.message);
                         }
                     },
-                    error: function (xhr, status, error) {
+                    error: function(xhr, status, error) {
 
                         console.log(xhr.responseText);
                         console.log("status:", status);
@@ -439,7 +434,7 @@ function handleUserLogin(params, flag) {
             type: "POST",
             data: params,
             dataType: "json",
-            success: function (data) {
+            success: function(data) {
                 // Handle the response from the server
                 if (data.success) {
                     // Redirect the user to the dashboard
@@ -449,7 +444,7 @@ function handleUserLogin(params, flag) {
                     $("#error-message").text(data.message);
                 }
             },
-            error: function (xhr, status, error) {
+            error: function(xhr, status, error) {
                 // Handle errors
                 console.error(xhr);
                 console.error(status);
