@@ -715,9 +715,10 @@
         <div class="verify-box" hidden="">
           <div class="input-group"><img class="icon"
               src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input
-              class="input-verify" i18n-placeholder="获取并输入验证码" placeholder="Nhận và nhập mã xác minh" type="tel"
-              maxlength="4">
-            <div class="btn-verify"><span class="verify-text" i18n-text="获取验证码">Nhận mã xác minh</span></div>
+              class="input-check" i18n-placeholder="获取并输入验证码" placeholder="Nhận và nhập mã xác minh" type="tel"
+              maxlength="5">
+            <div class="btn-verify"><span class="verify-text" i18n-text="获取验证码">Nhận mã xác minh</span></div> -->
+            <!-- <img class="check-img" src="https://socolive10.tv/webApi/api/kaptcha?t=1679981279483&mobile=1"> -->
           </div>
           <div class="error-tip"><span i18n-text="请输入4位验证码" hidden="">Nhập 4 ký tự mã xác minh</span></div>
         </div>
@@ -735,7 +736,7 @@
               class="input-account" type="text" placeholder="Nhập tên đăng nhập" required=""></div>
           <div class="error-tip"><span hidden="">Nhập tên đăng nhập</span></div>
         </div>
-        <div class="captcahr-box" hidden="">
+        <div class="captcha-box" hidden="">
           <div class="input-group"><img class="icon"
               src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input
               class="input-check" i18n-placeholder="请输入图片上的验证码" placeholder="Nhập mã xác minh trong hình" type="text"

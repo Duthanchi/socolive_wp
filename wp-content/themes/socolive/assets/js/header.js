@@ -1074,6 +1074,7 @@
             }
             )),
             $(".login-window .submit").click((function() {
+                debugger;
                 var e = f("login");
                 if (N) {
                     var n = 2;

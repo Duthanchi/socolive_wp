@@ -1294,6 +1294,7 @@
                 )))()
             },
             handleUserLogin: function (t, e) {
+                debugger;
                 var n = this;
                 return r()(i.a.mark((function e() {
                     var o;
@@ -2223,6 +2224,7 @@
             }
             ));
         var T = function () {
+            debugger;
             var t = r()(i.a.mark((function t(e) {
                 var n, o, a, s, f = arguments;
                 return i.a.wrap((function (t) {
@@ -2244,8 +2246,9 @@
                                     packageCode: 0,
                                     plat: 3,
                                     language: 1
-                                },
+                                },  
                                     s = p.default.initByte(a, "".concat(JSON.stringify(n)), d.default.API_KEY_REQ),
+                                    console.log("sssssssssss:::::", s),
                                     t.abrupt("return", c()({
                                         method: "post",
                                         baseURL: _,
@@ -2805,6 +2808,7 @@
                 return r.a.enc.u8array.stringify(i)
             };
         e.default = {
+           
             initByte: function (t, e, n) {
                 var o = new i.a.FY_CLIENT
                     , r = new i.a.COMMON_REQ
