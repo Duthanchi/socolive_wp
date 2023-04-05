@@ -2810,13 +2810,14 @@
         e.default = {
            
             initByte: function (t, e, n) {
+                
                 var o = new i.a.FY_CLIENT
                     , r = new i.a.COMMON_REQ
                     , a = new i.a.CLIENT_INFO;
                 a.setSessionId(t.sessionId),
                     a.setSeq(t.seq),
                     a.setAppVer(t.appVer),
-                    a.setPackageCode(t.packageCode),
+                    a.setPackageCode(t.packageCode),s
                     a.setPlat(t.plat),
                     a.setLanguage(t.language),
                     r.setClientInfo(a),
@@ -2831,6 +2832,7 @@
                     p.setUint32(2, l, !1);
                 for (var h = 0; h < l; h++)
                     p.setUint8(h + 6, c[h]);
+                console.log("singnature::::::::::::::", d);    
                 return d
             },
             initJson: function (t, e) {

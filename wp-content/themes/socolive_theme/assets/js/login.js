@@ -1,5 +1,220 @@
 jQuery(document).ready(function($) {
+
     let is_validate = false;
+    const baseUrl = 'http://localhost:80/?url=https://chat.chatvb.co/webApi';
+    const SECRET_KEY = '&%*$8@!!%';
+    const API_KEY_REQ = "PHp1st5vEg5Ca8FH";
+    const API_KEY_RESP = "qlCJekfRKwWkQxl7";
+
+    $(".login-window .submit").click((function() {
+        if (is_validate) {
+            
+            pwd = $(".login-window").find(".input-password").val();
+            var pwdMd5 = md5(pwd);
+            // pwdMd5 = pwdMd5 + SECRET_KEY
+            console.log(pwdMd5)
+
+            if (getType('login') === 'account') {
+                var data = {
+                    accountType: 2,
+                    loginName: $(".login-window").find(".input-account").val(),
+                    loginMode: 1,
+                    loginType: 1,
+                    password: pwdMd5,
+                    pwdType: 2,
+                    // pwdType: pwdType,
+                }
+                const sessionInfo = {
+                    sessionId: "",
+                    seq: 0,
+                    appVer: 0,
+                    packageCode: 0,
+                    plat: 3,
+                    language: 1,
+                }
+                // const params = initByte(sessionInfo, `${JSON.stringify(data)}`, API_KEY_REQ)
+
+                // data = JSON.stringify(data)
+                // remeberLogin()
+                // handleUserLogin(data)
+                //     .then((res) => {
+                //         closeWindow(1)
+                //     })
+                //     .catch((err) => {})
+                //  s= initByte(a, "".concat(JSON.stringify(data)), API_KEY_REQ),
+                debugger;
+                $.ajax({
+                    url: `${baseUrl}/login/login`,
+                    type: "POST",
+                    responseType: "blob",
+                    data:  data = JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json charset=utf-8',
+                    },
+                    success: function(response) {
+
+                        console.log("response::::", response);
+                        if (response && response.success) {
+                            window.location.href = "/luke";
+                        } else {
+                            $("#error-message").text(response.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+
+                        console.log(xhr.responseText);
+                        console.log("status:", status);
+                        console.log("error:", error);
+                    }
+                });
+            } else if (getType('login') === 'phone') {
+                const data = {
+                    accountType: 1,
+                    countryCode: $(".login-window").find('.country-code').val(),
+                    phone: $(".login-window").find(".input-phone").val(),
+                    loginMode: 1,
+                    loginType: 1,
+                    password: pwd,
+                    pwdType: 2,
+                    // pwdType: pwdType,
+                }
+                // remeberLogin()
+                // handleUserLogin(data)
+                //     .then((res) => {
+                //         closeWindow(1)
+                //     })
+                //     .catch((err) => {})
+
+                $.ajax({
+                    url: `${baseUrl}/login/login`,
+                    type: "POST",
+                    // dataType: "json",
+                    data: data,
+                    success: function(response) {
+
+                        console.log(response);
+                        if (response && response.success) {
+                            window.location.href = "/dashboard";
+                        } else {
+                            $("#error-message").text(response.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+
+                        console.log(xhr.responseText);
+                        console.log("status:", status);
+                        console.log("error:", error);
+                    }
+                });
+            }
+        }
+    }))
+    
+    $(".register-window .submit").click((function() {
+        debugger;
+            pwd = $(".register-window").find(".input-password").val();
+            var pwdMd5 = md5(pwd);
+            if (getType('register') === 'account') {
+                const regData = {
+                    accountType: 2,
+                    loginName: $(".register-window").find('.input-account').val(),
+                    password: pwdMd5,
+                    nickName: $(".register-window").find('.input-nickname').val(),
+                    // pwdType: pwdT2ype,
+                    pwdType: 2,
+                }
+                // api.handleUserRegister(regData).then((res) => {
+                //     Msg({
+                //         message: i18n.register + i18n.success, // '注册成功'
+                //     })
+                //     closeWindow(2)
+                // })
+
+                try {
+                    $.ajax({
+                        url: `${baseUrl}/login/reg`,
+                        type: "POST",
+                        // dataType: "json",
+                        data: regData,
+                        success: function(response) {
+    
+                            console.log(response);
+                            if (response && response.success) {
+                                window.location.href = "/dashboard";
+                            } else {
+                                $("#error-message").text(response.message);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+    
+                            console.log(xhr.responseText);
+                            console.log("status:", status);
+                            console.log("error:", error);
+                        }
+                    });
+                } catch (err) {
+                    return Promise.reject(err)
+                }
+
+
+            } else if (getType('register') === 'phone') {
+                const data = {
+                    countryCode: $(".register-window").find('.country-code').text(),
+                    phone: $(".register-window").find('.input-phone').val(),
+                    type: 1,
+                    smsCode: $(".register-window").find('.input-verify').val(),
+                }
+                api.checkSmsCode(data)
+                    .then((res) => {
+                        const data2 = {
+                            accountType: 1,
+                            countryCode: $(".register-window").find('.country-code').text(),
+                            phone: $(".register-window").find('.input-phone').val(),
+                            smsType: 1,
+                            smsCode: $(".register-window").find('.input-verify').val(),
+                            password: pwd,
+                            nickName: $(".register-window").find('.input-nickname').val(),
+                            pwdType: pwdType,
+                            kaptcha: $(".register-window").find('.input-phone').val()
+                                ? $(".register-window").find('.check-box .input-check').val()
+                                : $(".register-window").find('.captcha-box .input-check').val(),
+                        }
+                        api.handleUserRegister(data2)
+                            .then((res) => {
+                                Msg({
+                                    message: i18n.register + i18n.success, // '注册成功'
+                                })
+                                closeWindow(2)
+                            })
+                            .catch((err) => {
+                                $(".register-window").find('.check-box .check-img').click()
+                            })
+                    })
+                    .catch((err) => {
+                        $(".register-window").find('.check-box .check-img').click()
+                    })
+            }
+        })
+    )
+
+    function getType(type) {
+        if (type === 'login') {
+            if ($(".login-window").find(".input-phone").val().length > 0) {
+                return "phone";
+            } else if ($(".login-window").find(".input-account").val().length > 0) {
+                return "account";
+            }
+        }
+
+        if (type === 'register') {
+            if ($(".register-window").find(".input-phone").val().length > 0) {
+                return "phone";
+            } else if ($(".register-window").find(".input-account").val().length > 0) {
+                return "account";
+            }
+        }
+    }
+
     //Show and hide model login and register
     $(".header-login").click(function() {
         $(".header-modal").removeAttr("hidden");
@@ -139,7 +354,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-
     $(".captcha-box").find(".input-check").change(function() {
 
         var len = $(".captcha-box").find(".input-check").val().length;
@@ -260,7 +474,6 @@ jQuery(document).ready(function($) {
 
 
     // handle change login and register
-
     $(".login-window").find(".register-jump").click(function() {
         $(".login-window").attr("hidden", true);
         $(".register-window").removeAttr("hidden");
@@ -272,264 +485,31 @@ jQuery(document).ready(function($) {
         $(".login-window").removeAttr("hidden");
         $(".login-window").show();
     });
-
-    const SECRET_KEY = '&%*$8@!!%';
-    const API_KEY_REQ = "PHp1st5vEg5Ca8FH";
-    const API_KEY_RESP = "qlCJekfRKwWkQxl7";
-
-    $(".login-window .submit").click((function() {
-
-        if (is_validate) {
-
-            const baseUrl = 'http://localhost:80/https://chat.chatvb.co/webApi';
-            pwd = $(".input-password").val();
-            var pwdMd5 = md5(pwd);
-            // pwdMd5 = pwdMd5 + SECRET_KEY
-
-
-            console.log(pwdMd5)
-
-            if (getType('login') === 'account') {
-                var data = {
-                    accountType: 2,
-                    loginName: $(".input-account").val(),
-                    loginMode: 1,
-                    loginType: 1,
-                    password: pwdMd5,
-                    pwdType: 2,
-                    // pwdType: pwdType,
-                }
-
-                // data = JSON.stringify(data)
-                // remeberLogin()
-                // handleUserLogin(data)
-                //     .then((res) => {
-                //         closeWindow(1)
-                //     })
-                //     .catch((err) => {})
-                a = {
-                    sessionId: "",
-                    seq: 0,
-                    appVer: 0,
-                    packageCode: 0,
-                    plat: 3,
-                    language: 1
-                }
-                //  s= initByte(a, "".concat(JSON.stringify(data)), API_KEY_REQ),
-                $.ajax({
-                    url: `${baseUrl}/login/login`,
-                    type: "POST",
-                    // dataType: "blob",
-                    data: data,
-                    success: function(response) {
-
-                        console.log("response::::", response);
-                        if (response && response.success) {
-                            window.location.href = "/luke";
-                        } else {
-                            $("#error-message").text(response.message);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-
-                        console.log(xhr.responseText);
-                        console.log("status:", status);
-                        console.log("error:", error);
-                    }
-                });
-            } else if (getType('login') === 'phone') {
-                const data = {
-                    accountType: 1,
-                    countryCode: $('.country-code').val(),
-                    phone: $(".input-phone").val(),
-                    loginMode: 1,
-                    loginType: 1,
-                    password: pwd,
-                    pwdType: 2,
-                    // pwdType: pwdType,
-                }
-                // remeberLogin()
-                // handleUserLogin(data)
-                //     .then((res) => {
-                //         closeWindow(1)
-                //     })
-                //     .catch((err) => {})
-
-                $.ajax({
-                    url: `${baseUrl}/login/login`,
-                    type: "POST",
-                    // dataType: "json",
-                    data: data,
-                    success: function(response) {
-
-                        console.log(response);
-                        if (response && response.success) {
-                            window.location.href = "/dashboard";
-                        } else {
-                            $("#error-message").text(response.message);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-
-                        console.log(xhr.responseText);
-                        console.log("status:", status);
-                        console.log("error:", error);
-                    }
-                });
-            }
-        }
-    }))
-
-    function getType(type) {
-        if (type === 'login') {
-            if ($(".input-phone").val().length > 0) {
-                return "phone";
-            } else if ($(".input-account").val().length > 0) {
-                return "account";
-            }
-        }
-    }
-
 });
 
-// 用户登录
-function handleUserLogin(params, flag) {
-    // 登录时，先要清理一下 sessionId 防止出现“无权”
-
-    let storeData = {};
-    const baseUrl = 'http://localhost:80/https://chat.chatvb.co/webApi';
-
-    storeData.sessionId = ''
-    try {
-        // let res = axios.post(`${baseUrl}/login/login`, params)
-        // // let res = axioa.post("http://localhost:80/https://chat.chatvb.co/webApi'/login/login", params);
-        // console.log(res)
-        // // 先清空
-        // storeData.userInfo = ''
-        // storeData.urls = ''
-        // // 存入手机号
-        // if (res.phone && res.countryCode) {
-        //     res.userInfo.phone = res.phone
-        //     if (res.countryCode !== 0) {
-        //         res.userInfo.countryCode = '+' + res.countryCode
-        //     }
-        // } else if (params.phone && params.countryCode) {
-        //     res.userInfo.phone = params.phone
-        //     res.userInfo.countryCode = params.countryCode
-        // }
-        // if (res.loginName) {
-        //     res.userInfo.loginName = res.loginName
-        // }
-        // storeData.isUser = 1
-        // storeData.sessionId = res.sessionId
-        // storeData.userInfo = res.userInfo
-        // storeData.urls = res.urls
-        // storeData.sysNoticeList = []
-        // storeData.concernList = null
-        // storeData.newMsg = 0
-        // cors(storeData.sessionId, storeData.userInfo, storeData.urls, storeData.isUser)
-
-        $.ajax({
-            url: `${baseUrl}/login/login`, // Replace with the URL of your login script
-            type: "POST",
-            data: params,
-            dataType: "json",
-            success: function(data) {
-                // Handle the response from the server
-                if (data.success) {
-                    // Redirect the user to the dashboard
-                    window.location.href = "";
-                } else {
-                    // Display an error message
-                    $("#error-message").text(data.message);
-                }
-            },
-            error: function(xhr, status, error) {
-                // Handle errors
-                console.error(xhr);
-                console.error(status);
-                console.error(error);
-            }
-        });
-
-    } catch (err) {
-        console.error(err);
-        return Promise.reject(err)
-    }
-};
-
-// 用户注册
-function handleUserRegister(params) {
-    try {
-        api.userRegister(params).then((res) => {
-            storeData.urls = ''
-            storeData.sessionId = ''
-            storeData.userInfo = ''
-            res.userInfo.phone = params.phone
-            res.userInfo.countryCode = params.countryCode
-            res.userInfo.loginName = params.loginName
-            storeData.isUser = 1
-            storeData.sessionId = res.sessionId
-            storeData.userInfo = res.userInfo
-            storeData.urls = res.urls
-            storeData.sysNoticeList = []
-            storeData.concernList = null
-            storeData.newMsg = 0
-
-            // 初始化 ws
-            // websocket.send(constant.WS_CODE.LOGIN, {
-            //   key: res.sessionId,
-            //   plat: 3,
-            //   version: 1,
-            // })
-            cors(storeData.sessionId, storeData.userInfo, storeData.urls, storeData.isUser)
-        })
-    } catch (err) {
-        return Promise.reject(err)
-    }
-};
-
-// 用户退出登录
-function handleUserLogout(params) {
-    api.userLogout()
-    storeData.sessionId = ''
-    storeData.userInfo = ''
-    storeData.urls = ''
-    storeData.isUser = 0
-    cors(storeData.sessionId, storeData.userInfo, storeData.urls, storeData.isUser)
-};
-
-
-function initByte(t, e, n) {
-
-    const o = new FY_CLIENT();
-    const r = new COMMON_REQ();
-    const a = new CLIENT_INFO();
-
-    a.setSessionId(t.sessionId);
-    a.setSeq(t.seq);
-    a.setAppVer(t.appVer);
-    a.setPackageCode(t.packageCode);
-    a.setPlat(t.plat);
-    a.setLanguage(t.language);
-
-    r.setClientInfo(a);
-    r.setParam(s(e));
-
-    o.setCommonReq(r);
-
-    const c = u(o.serializeBinary(), n);
-    const l = c.length;
-    const d = new ArrayBuffer(6 + l);
-    const p = new DataView(d);
-
-    p.setInt8(0, 0, false);
-    p.setInt8(1, -96, false);
-    p.setUint32(2, l, false);
-
-    for (let h = 0; h < l; h++) {
-        p.setUint8(h + 6, c[h]);
-    }
-
-    return d;
-}
+// const initByte = (sessionInfo, params, commonKey) => {
+//     const fyClient = new httpProto.FY_CLIENT()
+//     const commonReq = new httpProto.COMMON_REQ()
+//     const clientInfo = new httpProto.CLIENT_INFO()
+//     clientInfo.setSessionId(sessionInfo.sessionId)
+//     clientInfo.setSeq(sessionInfo.seq)
+//     clientInfo.setAppVer(sessionInfo.appVer)
+//     clientInfo.setPackageCode(sessionInfo.packageCode)
+//     clientInfo.setPlat(sessionInfo.plat)
+//     clientInfo.setLanguage(sessionInfo.language)
+//     commonReq.setClientInfo(clientInfo)
+//     commonReq.setParam(stringToUint8Array(params))
+//     fyClient.setCommonReq(commonReq)
+//     var sendMsg = getAesString(fyClient.serializeBinary(), commonKey)
+//     var length = sendMsg.length
+//     var buf = new ArrayBuffer(6 + length) //定义一个6字节的内存区域
+//     var dv = new DataView(buf)
+//     dv.setInt8(0, 0, false)
+//     dv.setInt8(1, -96, false)
+//     // dv.setUint16(0, 3328, false)
+//     dv.setUint32(2, length, false)
+//     for (var i = 0; i < length; i++) {
+//       dv.setUint8(i + 6, sendMsg[i])
+//     }
+//     return buf
+//   }

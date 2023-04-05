@@ -154,11 +154,12 @@
 	</header>
 
 	<!-- Form login -->
+    <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/login.js"></script> -->
 	<div class="login-window header-window" hidden=""><img class="close" id="close-login"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/close.png">
         <div class="window-inner">
             <section class="content type-content">
-            <div class="form"><input type="password" autocomplete="new-password" hidden="">
+            <div class="form"><input type="password " autocomplete="new-password" hidden="">
                 <div class="form-title">Đăng nhập</div>
                 <div class="phone-box">
                 <div class="input-group">
@@ -717,7 +718,7 @@
               src="<?php echo get_template_directory_uri(); ?>/assets/images/password.svg"> <input
               class="input-check" i18n-placeholder="获取并输入验证码" placeholder="Nhận và nhập mã xác minh" type="tel"
               maxlength="5">
-            <div class="btn-verify"><span class="verify-text" i18n-text="获取验证码">Nhận mã xác minh</span></div> -->
+            <div class="btn-verify"><span class="verify-text" i18n-text="获取验证码">Nhận mã xác minh</span></div>
             <!-- <img class="check-img" src="https://socolive10.tv/webApi/api/kaptcha?t=1679981279483&mobile=1"> -->
           </div>
           <div class="error-tip"><span i18n-text="请输入4位验证码" hidden="">Nhập 4 ký tự mã xác minh</span></div>
