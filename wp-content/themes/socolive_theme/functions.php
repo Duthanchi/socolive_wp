@@ -547,7 +547,7 @@ function socolive_scripts_loader() {
 	wp_enqueue_script( 'require', 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js', array(), $theme_version, true );
 	// wp_enqueue_script( 'loginjs', get_theme_file_uri( 'assets/js/protobuf.min.js' ), array(), $theme_version, true );
 	// wp_enqueue_script( 'fy_pb', get_theme_file_uri( 'assets/js/proto/fy_pb.js' ), array(), $theme_version, true );
-	wp_enqueue_script( 'loginjs', get_theme_file_uri( 'assets/js/login.js' ), array(), $theme_version, true );
+	wp_enqueue_script( 'loginjs', get_theme_file_uri( 'dist/bundle.js' ), array(), $theme_version, true );
 
 	// wp_enqueue_script( 'index', get_theme_file_uri( 'assets/js/index.js' ), array(), $theme_version, true );
 	// wp_enqueue_script( 'loginjs', get_theme_file_uri( 'assets/js/login.js' ), array(), $theme_version, true );

@@ -1,27 +1,41 @@
-const path = require( 'path' ),
-	webpack = require( 'webpack' );
-
+const path = require("path");
+console.log(__dirname);
+console.log(path.resolve(__dirname, 'dist'));
 module.exports = {
-	mode: 'production',
-	context: path.resolve( __dirname, 'assets' ),
-	entry: {
-		main: [ './main.js' ],
-	},
+	mode: 'development',
+	entry: './assets/js/app.js',
 	output: {
-		path: path.resolve( __dirname, 'assets/dist' ),
-		filename: '[name].bundle.js',
+	  filename: 'bundle.js',
+	  path: path.resolve(__dirname, 'dist'),
 	},
-	// Uncomment if jQuery support is needed
-	/*externals: {
-		jquery: 'jQuery'
+	// devServer: {
+	// // path: path.join(__dirname, 'dist'),
+	// 	//   compress: true,
+	//   port: 8080,
+	// },
+	module: {
+	  rules: [
+		{
+		  test: /\.js$/,
+		  exclude: /node_modules/,
+		  use: {
+			loader: 'babel-loader',
+			options: {
+			  presets: [
+				[
+				  '@babel/preset-env',
+				  {
+					targets: {
+					  node: 'current',
+					},
+				  },
+				],
+			  ],
+			  plugins: ['@babel/plugin-transform-modules-commonjs'],
+			},
+		  },
+		},
+	  ],
 	},
-	plugins: [
-		new webpack.ProvidePlugin( {
-			$: 'jquery',
-			jQuery: 'jquery',
-			'window.jQuery': 'jquery',
-		} ),
-	],*/
-	devtool: 'source-map',
-	watch: true,
-};
+	watch:true
+  };

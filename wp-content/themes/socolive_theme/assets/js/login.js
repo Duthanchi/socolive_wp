@@ -1,15 +1,15 @@
+// import CryptoJS from 'crypto-js'
+// import httpProto from './proto/fy_pb.js'
+import api from './api.js'
+import apiFormat from './apiFormat'
+
 jQuery(document).ready(function($) {
 
     let is_validate = false;
-    const baseUrl = 'http://localhost:80/?url=https://chat.chatvb.co/webApi';
-    const SECRET_KEY = '&%*$8@!!%';
-    const API_KEY_REQ = "PHp1st5vEg5Ca8FH";
-    const API_KEY_RESP = "qlCJekfRKwWkQxl7";
 
     $(".login-window .submit").click((function() {
         if (is_validate) {
-            
-            pwd = $(".login-window").find(".input-password").val();
+            var pwd = $(".login-window").find(".input-password").val();
             var pwdMd5 = md5(pwd);
             // pwdMd5 = pwdMd5 + SECRET_KEY
             console.log(pwdMd5)
@@ -25,48 +25,64 @@ jQuery(document).ready(function($) {
                     // pwdType: pwdType,
                 }
                 const sessionInfo = {
-                    sessionId: "",
+                    sessionId:"",
                     seq: 0,
                     appVer: 0,
                     packageCode: 0,
                     plat: 3,
                     language: 1,
                 }
-                // const params = initByte(sessionInfo, `${JSON.stringify(data)}`, API_KEY_REQ)
-
-                // data = JSON.stringify(data)
+                // const params = apiFormat.initByte(sessionInfo, `${JSON.stringify(data)}`, API_KEY_REQ)
+                data = JSON.stringify(data)
                 // remeberLogin()
                 // handleUserLogin(data)
                 //     .then((res) => {
                 //         closeWindow(1)
                 //     })
                 //     .catch((err) => {})
-                //  s= initByte(a, "".concat(JSON.stringify(data)), API_KEY_REQ),
-                debugger;
-                $.ajax({
-                    url: `${baseUrl}/login/login`,
-                    type: "POST",
-                    responseType: "blob",
-                    data:  data = JSON.stringify(data),
-                    headers: {
-                        'Content-Type': 'application/json charset=utf-8',
-                    },
-                    success: function(response) {
+                // var baseUrl="https://cors-anywhere.herokuapp.com/https://chat.chatvb.co/webApi"
+                // $.ajax({
+                //     url: `${baseUrl}/login/login`,
+                //     type: "POST",
+                //     responseType: "blob",
+                //     timeout: 30000,
+                //     data: data,
+                //     headers: {
+                //         'Content-Type': 'application/json charset=utf-8',
+                //     },
+                //     success: function(response) {
+                //         debugger;
+                //         // const jsonData = apiFormat.initJson(response, API_KEY_RESP)
 
-                        console.log("response::::", response);
-                        if (response && response.success) {
-                            window.location.href = "/luke";
-                        } else {
-                            $("#error-message").text(response.message);
-                        }
-                    },
-                    error: function(xhr, status, error) {
+                //         console.log("response::::", response);
+                //         // if (response && response.success) {
+                //         //     window.location.href = "/luke";
+                //         // } else {
+                //         //     $("#error-message").text(response.message);
+                //         // }
 
-                        console.log(xhr.responseText);
-                        console.log("status:", status);
-                        console.log("error:", error);
-                    }
-                });
+                //         // if (jsonData.apiResult.code === 200) {
+                //         //     return jsonData.result || true
+                //         // } else if (jsonData.apiResult.code === 100) {
+                //         //     if (!notLogin) {
+                //         //         console.log('需要用户重登，跳转登录页面')
+                //         //         api.handleLoginJump(true)
+                //         //     } else {
+                //         //         console.log('需要用户重登，但不跳转登录页面')
+                //         //     }
+
+                //     },
+                //     error: function(xhr, status, error) {
+                //         console.log(xhr.responseText);
+                //         console.log("status:", status);
+                //         console.log("error:", error);
+                //     }
+                // });
+                handleUserLogin(data)
+                .then((res) => {
+                    // closeWindow(1)
+                })
+                .catch((err) => {})
             } else if (getType('login') === 'phone') {
                 const data = {
                     accountType: 1,
@@ -85,27 +101,33 @@ jQuery(document).ready(function($) {
                 //     })
                 //     .catch((err) => {})
 
-                $.ajax({
-                    url: `${baseUrl}/login/login`,
-                    type: "POST",
-                    // dataType: "json",
-                    data: data,
-                    success: function(response) {
+                // $.ajax({
+                //     url: `${baseUrl}/login/login`,
+                //     type: "POST",
+                //     // dataType: "json",
+                //     data: data,
+                //     success: function(response) {
 
-                        console.log(response);
-                        if (response && response.success) {
-                            window.location.href = "/dashboard";
-                        } else {
-                            $("#error-message").text(response.message);
-                        }
-                    },
-                    error: function(xhr, status, error) {
+                //         console.log(response);
+                //         if (response && response.success) {
+                //             window.location.href = "/dashboard";
+                //         } else {
+                //             $("#error-message").text(response.message);
+                //         }
+                //     },
+                //     error: function(xhr, status, error) {
 
-                        console.log(xhr.responseText);
-                        console.log("status:", status);
-                        console.log("error:", error);
-                    }
-                });
+                //         console.log(xhr.responseText);
+                //         console.log("status:", status);
+                //         console.log("error:", error);
+                //     }
+                // });
+
+                handleUserLogin(data)
+                .then((res) => {
+                    closeWindow(1)
+                })
+                .catch((err) => {})
             }
         }
     }))
@@ -486,30 +508,49 @@ jQuery(document).ready(function($) {
         $(".login-window").show();
     });
 });
+// 用户登录
+async function handleUserLogin(params, flag){
+    // 登录时，先要清理一下 sessionId 防止出现“无权”
+    // storeData.sessionId = ''
+    try {
+        let res = await api.userLogin(params)
 
-// const initByte = (sessionInfo, params, commonKey) => {
-//     const fyClient = new httpProto.FY_CLIENT()
-//     const commonReq = new httpProto.COMMON_REQ()
-//     const clientInfo = new httpProto.CLIENT_INFO()
-//     clientInfo.setSessionId(sessionInfo.sessionId)
-//     clientInfo.setSeq(sessionInfo.seq)
-//     clientInfo.setAppVer(sessionInfo.appVer)
-//     clientInfo.setPackageCode(sessionInfo.packageCode)
-//     clientInfo.setPlat(sessionInfo.plat)
-//     clientInfo.setLanguage(sessionInfo.language)
-//     commonReq.setClientInfo(clientInfo)
-//     commonReq.setParam(stringToUint8Array(params))
-//     fyClient.setCommonReq(commonReq)
-//     var sendMsg = getAesString(fyClient.serializeBinary(), commonKey)
-//     var length = sendMsg.length
-//     var buf = new ArrayBuffer(6 + length) //定义一个6字节的内存区域
-//     var dv = new DataView(buf)
-//     dv.setInt8(0, 0, false)
-//     dv.setInt8(1, -96, false)
-//     // dv.setUint16(0, 3328, false)
-//     dv.setUint32(2, length, false)
-//     for (var i = 0; i < length; i++) {
-//       dv.setUint8(i + 6, sendMsg[i])
-//     }
-//     return buf
-//   }
+        console.log(res)
+        
+        // 先清空
+        // storeData.userInfo = ''
+        // storeData.urls = ''
+        // 存入手机号
+        if (res.phone && res.countryCode) {
+            res.userInfo.phone = res.phone
+            if (res.countryCode !== 0) {
+                res.userInfo.countryCode = '+' + res.countryCode
+            }
+        } else if (params.phone && params.countryCode) {
+            res.userInfo.phone = params.phone
+            res.userInfo.countryCode = params.countryCode
+        }
+        if (res.loginName) {
+            res.userInfo.loginName = res.loginName
+        }
+        // storeData.isUser = 1
+        // storeData.sessionId = res.sessionId
+        // storeData.userInfo = res.userInfo
+        // storeData.urls = res.urls
+        // storeData.sysNoticeList = []
+        // storeData.concernList = null
+        // storeData.newMsg = 0
+
+        // if (!flag) {
+        //   // 初始化 ws
+        //   websocket.send(constant.WS_CODE.LOGIN, {
+        //     key: res.sessionId,
+        //     plat: 3,
+        //     version: 1,
+        //   })
+        // }
+        // cors(storeData.sessionId, storeData.userInfo, storeData.urls, storeData.isUser)
+    } catch (err) {
+        return Promise.reject(err)
+    }
+};
