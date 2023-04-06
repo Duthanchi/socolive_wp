@@ -1,5 +1,3 @@
-
-
 const baseUrl = 'http://localhost:80/https://chat.chatvb.co/webApi';
 const SECRET_KEY = '&%*$8@!!%';
 const API_KEY_REQ = "PHp1st5vEg5Ca8FH";
