@@ -13,11 +13,7 @@ let baseUrl = constant.baseUrl
 // let imApiUrl = constant.imApiUrl
 
 axios.defaults.withCredentials = true
-// axios.defaults.headers = {
-    
-//   },
 
-// http request 拦截器
 axios.interceptors.request.use(
     (config) => {
         return config
@@ -32,7 +28,6 @@ axios.interceptors.response.use(
         if (response && response.status === 200) {
             return response.data
         } else {
-            // alert('status error: ' + response.status)
             return false
         }
     },
@@ -42,9 +37,7 @@ axios.interceptors.response.use(
     },
 )
 
-// notLogin: 如果报100错误，是否需要提示用户登录，true 表示不需要提示
 const post = async (url, data = {}, notLogin) => {
-    debugger;
     // if (!storeData.sessionId && url !== '/login/guestLogin') {
     //     try {
     //         //await api.handleVisitorLogin()
@@ -66,19 +59,18 @@ const post = async (url, data = {}, notLogin) => {
     console.log(params)
     return axios({
         method: 'post',
-        baseURL: baseUrl,
+        baseURL: 'http://localhost:8080',
         url,
         responseType: 'blob',
         timeout: 30000,
         data: params,
         headers: {
-            'Content-Type': 'application/json charset=utf-8',
-            'Access-Control-Allow-Origin': '*',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
+            'Content-Type': 'application/octet-stream',
+          },
+        withCredentials: true,
+
     })
         .then(async (res) => {
-            debugger;
             const jsonData = await apiFormat.initJson(res, constant.API_KEY_RESP)
             if (jsonData.commonResult.code === 200) {
                 return jsonData.result || true
@@ -117,6 +109,7 @@ const post = async (url, data = {}, notLogin) => {
             }
         })
         .catch((err) => {
+            console.log(err)
             return Promise.reject(err)
         })
 }

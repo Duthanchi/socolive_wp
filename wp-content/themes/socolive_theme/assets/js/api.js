@@ -13,12 +13,11 @@ import http from './http';
   };
     //用户登录
     const userLogin = (params) => {
-    debugger;
-    return  http.post("/login/login", params, false);
+    // return  axios.post(`${constant.baseUrl}/login/login`, params);
+    return  http.post("/luke-project/wp-content/themes/socolive_theme/wp-remote-login.php", params);
   };
 
   const userRegister = (params) => {
-    debugger;
     return  axios.post(`${constant.baseUrl}/login/reg`, params);
   };
 
