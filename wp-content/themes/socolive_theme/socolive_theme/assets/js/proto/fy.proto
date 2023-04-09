@@ -1,0 +1,38 @@
+syntax = "proto3";
+package http;
+
+message FY_CLIENT
+{
+	COMMON_REQ		common_req          = 1; //公共请求
+	COMMON_RESP		common_resp         = 2; //公共响应
+}
+//客户端详情
+message CLIENT_INFO
+{
+    string session_id = 1; //session
+    int32  seq = 2;      //序列号
+    int32  app_ver = 3;  //应用版本号
+    int32  package_code=4;//包ID
+    int32  plat = 3;     //登陆平台
+    int32  language = 6; //系统语言
+}
+
+//公共的返回结果
+message COMMON_RESULT {
+    int32 	err_code = 1;  	//错误码
+    string err_msg = 2;   //错误内容
+    int32  seq = 3;       //序列号
+    string new_session_id = 4;
+}
+
+//公共请求
+message COMMON_REQ{
+   CLIENT_INFO   client_info = 1;
+   bytes         param=2;//参数串,以JSON串来传输
+}
+
+//公共响应
+message COMMON_RESP {
+   COMMON_RESULT     common_result = 1;  //结果信息
+   bytes             result=2;//参数串，以JSON串来传输
+}
