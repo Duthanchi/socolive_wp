@@ -11,6 +11,8 @@ import apiFormat from './apiFormat'
 let baseUrl = constant.baseUrl
 // let staticApiUrl = constant.staticApiUrl
 // let imApiUrl = constant.imApiUrl
+const currentDomain = window.location.host;
+
 
 axios.defaults.withCredentials = true
 
@@ -59,7 +61,7 @@ const post = async (url, data = {}, notLogin) => {
     console.log(params)
     return axios({
         method: 'post',
-        baseURL: 'http://localhost:10009',
+        baseURL: currentDomain + "/luke-project",
         url,
         responseType: 'blob',
         timeout: 30000,
