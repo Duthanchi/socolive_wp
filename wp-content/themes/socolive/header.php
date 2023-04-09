@@ -54,7 +54,7 @@
             <div class="submenu subscribe-submenu" hidden="">
               <div class="submenu-box">
                 <div class="subscribe-none" hidden=""><img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/none.png"> <span
+                    src="<?php echo get_template_directory_uri(); ?>/"> <span
                     i18n-text="预约列表空空如也~">Danh sách lịch hẹn trống~</span></div>
                 <div class="subscribe-data" hidden="">
                   <div class="subscribe-data-box"></div>

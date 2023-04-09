@@ -99,8 +99,6 @@ const initByte = (sessionInfo, params, commonKey) => {
       dv.setUint8(i + 6, sendMsg[i])
   }
   
-  console.log("buf::::", buf);
-  debugger;
   return buf
 }
 
